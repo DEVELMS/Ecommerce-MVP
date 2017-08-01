@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Table View Controller-->
+        <scene sceneID="e3v-VJ-gPx">
+            <objects>
+                <tableViewController id="zQh-BL-WnG" customClass="ListTableViewController" customModule="Ecommerce_MVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lq2-20-Ihq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="zQh-BL-WnG" id="XvN-e8-JpW"/>
+                            <outlet property="delegate" destination="zQh-BL-WnG" id="dDv-x5-VF5"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HvM-2Q-HZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="250" id="gbO-2o-qV3" customClass="PokemonCell" customModule="Ecommerce_MVP" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gbO-2o-qV3" id="sDC-ea-eaD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u2D-8e-QgB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="blK-Jp-TWT">
+                                    <size key="itemSize" width="200" height="249"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokemonCollectionCell" id="yDY-VU-OCy" customClass="PokemonCollectionCell" customModule="Ecommerce_MVP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="249"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="249"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeball_background" translatesAutoresizingMaskIntoConstraints="NO" id="1dT-2r-NEa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="249"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf2-he-1Jd">
+                                                    <rect key="frame" x="65" y="219" width="71" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="PG4-5y-f8C"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="clq-H1-cWP">
+                                                    <rect key="frame" x="30" y="15" width="140" height="140"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="140" id="5B8-tm-tK2"/>
+                                                        <constraint firstAttribute="width" constant="140" id="lJA-GL-aLJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="1dT-2r-NEa" secondAttribute="trailing" id="8Cn-VG-d3y"/>
+                                            <constraint firstAttribute="bottom" secondItem="1dT-2r-NEa" secondAttribute="bottom" id="GCf-Vn-kja"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bf2-he-1Jd" secondAttribute="bottom" constant="10" id="HIp-L3-2g4"/>
+                                            <constraint firstItem="Bf2-he-1Jd" firstAttribute="centerX" secondItem="yDY-VU-OCy" secondAttribute="centerX" id="Kt6-9A-uAI"/>
+                                            <constraint firstItem="1dT-2r-NEa" firstAttribute="top" secondItem="yDY-VU-OCy" secondAttribute="top" id="Tbx-g0-UGN"/>
+                                            <constraint firstItem="1dT-2r-NEa" firstAttribute="leading" secondItem="yDY-VU-OCy" secondAttribute="leading" id="Vnc-Jy-QJg"/>
+                                            <constraint firstItem="clq-H1-cWP" firstAttribute="top" secondItem="yDY-VU-OCy" secondAttribute="top" constant="15" id="mA3-DT-NMG"/>
+                                            <constraint firstItem="clq-H1-cWP" firstAttribute="centerX" secondItem="yDY-VU-OCy" secondAttribute="centerX" id="nl3-Bt-qUQ"/>
+                                        </constraints>
+                                        <size key="customSize" width="200" height="249"/>
+                                        <connections>
+                                            <outlet property="image" destination="clq-H1-cWP" id="xpp-MV-Y1P"/>
+                                            <outlet property="name" destination="Bf2-he-1Jd" id="nve-hf-qYC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u2D-8e-QgB" secondAttribute="trailing" id="P63-89-8NU"/>
+                            <constraint firstItem="u2D-8e-QgB" firstAttribute="leading" secondItem="sDC-ea-eaD" secondAttribute="leading" id="Vs9-SY-8X7"/>
+                            <constraint firstAttribute="bottom" secondItem="u2D-8e-QgB" secondAttribute="bottom" id="kRS-9V-pnv"/>
+                            <constraint firstItem="u2D-8e-QgB" firstAttribute="top" secondItem="sDC-ea-eaD" secondAttribute="top" id="lsG-lX-Zhw"/>
+                        </constraints>
+                    </tableViewCellContentView>
+                </tableViewCell>
+            </objects>
+            <point key="canvasLocation" x="82" y="-37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholder" width="187" height="166"/>
+        <image name="pokeball_background" width="640" height="360"/>
+    </resources>
+</document>
