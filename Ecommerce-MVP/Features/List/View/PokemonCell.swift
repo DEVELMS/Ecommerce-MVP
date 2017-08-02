@@ -14,6 +14,20 @@ class PokemonCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+}
+
+extension PokemonCell: UICollectionViewDataSource {
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return PokemonCollectionViewCell()
+    }
+}
+
+extension PokemonCell: UICollectionViewDelegate {
+    
 }

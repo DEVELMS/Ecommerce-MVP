@@ -18,34 +18,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="P8R-Fx-oJq" kind="relationship" relationship="viewControllers" id="SUH-f3-LS0"/>
-                        <segue destination="HJD-b8-Eev" kind="relationship" relationship="viewControllers" id="JzG-ol-2OI"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5HB-ci-thY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-895" y="-209"/>
-        </scene>
-        <!--ListTableViewController-->
-        <scene sceneID="pa7-GS-d1f">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="List" storyboardName="List" referencedIdentifier="ListTableViewController" id="P8R-Fx-oJq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nQ2-jj-CE5"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ga-x6-2GU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-263" y="-363"/>
-        </scene>
-        <!--ProfileTableViewController-->
-        <scene sceneID="oZK-6F-C2h">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileTableViewController" id="HJD-b8-Eev" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uqc-aq-zPD"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Deg-bF-tTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-250" y="-63"/>
         </scene>
     </scenes>
 </document>

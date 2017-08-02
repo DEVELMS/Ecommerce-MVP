@@ -48,7 +48,7 @@ enum Colors {
         case .tabbar(let type):
             switch type {
             case .selected: return UIColor(hexadecimal: 0xFFFFFF)
-            case .unselected: return UIColor(hexadecimal: 0xF0F0F0)
+            case .unselected: return UIColor(hexadecimal: 0x999999)
             case .background: return UIColor(hexadecimal: 0x000000)
             }
         }
