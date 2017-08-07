@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		519083C71F39039200C9AB9B /* KindService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519083C61F39039200C9AB9B /* KindService.swift */; };
-		519083C91F3904D800C9AB9B /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519083C81F3904D800C9AB9B /* PokemonService.swift */; };
-		519083CB1F39050800C9AB9B /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519083CA1F39050800C9AB9B /* CategoryService.swift */; };
-		519083CD1F39055C00C9AB9B /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519083CC1F39055C00C9AB9B /* PurchaseService.swift */; };
+		519083D21F39065E00C9AB9B /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519083CE1F39065E00C9AB9B /* CategoryService.swift */; };
+		519083D31F39065E00C9AB9B /* KindService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519083CF1F39065E00C9AB9B /* KindService.swift */; };
+		519083D41F39065E00C9AB9B /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519083D01F39065E00C9AB9B /* PokemonService.swift */; };
+		519083D51F39065E00C9AB9B /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519083D11F39065E00C9AB9B /* PurchaseService.swift */; };
 		C2141A271F38338000296B52 /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2141A251F38338000296B52 /* Do.swift */; };
 		C2141A281F38338000296B52 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2141A261F38338000296B52 /* Request.swift */; };
 		C248F8541F2E7D9C004095CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248F8531F2E7D9C004095CA /* AppDelegate.swift */; };
@@ -38,10 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		519083C61F39039200C9AB9B /* KindService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindService.swift; sourceTree = "<group>"; };
-		519083C81F3904D800C9AB9B /* PokemonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
-		519083CA1F39050800C9AB9B /* CategoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
-		519083CC1F39055C00C9AB9B /* PurchaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
+		519083CE1F39065E00C9AB9B /* CategoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryService.swift; path = Services/CategoryService.swift; sourceTree = SOURCE_ROOT; };
+		519083CF1F39065E00C9AB9B /* KindService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KindService.swift; path = Services/KindService.swift; sourceTree = SOURCE_ROOT; };
+		519083D01F39065E00C9AB9B /* PokemonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonService.swift; path = Services/PokemonService.swift; sourceTree = SOURCE_ROOT; };
+		519083D11F39065E00C9AB9B /* PurchaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseService.swift; path = Services/PurchaseService.swift; sourceTree = SOURCE_ROOT; };
 		C2141A251F38338000296B52 /* Do.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Do.swift; path = Helpers/Do.swift; sourceTree = SOURCE_ROOT; };
 		C2141A261F38338000296B52 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Helpers/Request.swift; sourceTree = SOURCE_ROOT; };
 		C248F8501F2E7D9C004095CA /* Ecommerce-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,10 +327,10 @@
 		C2625FD91F381F770080744C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				519083CA1F39050800C9AB9B /* CategoryService.swift */,
-				519083C81F3904D800C9AB9B /* PokemonService.swift */,
-				519083C61F39039200C9AB9B /* KindService.swift */,
-				519083CC1F39055C00C9AB9B /* PurchaseService.swift */,
+				519083CE1F39065E00C9AB9B /* CategoryService.swift */,
+				519083CF1F39065E00C9AB9B /* KindService.swift */,
+				519083D01F39065E00C9AB9B /* PokemonService.swift */,
+				519083D11F39065E00C9AB9B /* PurchaseService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -412,9 +412,8 @@
 			files = (
 				C2625FE11F3820970080744C /* TabBarRouter.swift in Sources */,
 				C2625FFA1F3821520080744C /* NSObjectExtension.swift in Sources */,
-				519083CD1F39055C00C9AB9B /* PurchaseService.swift in Sources */,
+				519083D51F39065E00C9AB9B /* PurchaseService.swift in Sources */,
 				C2141A271F38338000296B52 /* Do.swift in Sources */,
-				519083CB1F39050800C9AB9B /* CategoryService.swift in Sources */,
 				C2625FE51F3820B40080744C /* ListTableViewController.swift in Sources */,
 				C2625FF71F3821340080744C /* Purchase.swift in Sources */,
 				C2625FEF1F3820EA0080744C /* Pokemon.swift in Sources */,
@@ -423,16 +422,17 @@
 				C248F8541F2E7D9C004095CA /* AppDelegate.swift in Sources */,
 				C26260011F38215A0080744C /* Loader.swift in Sources */,
 				C2625FE71F3820CC0080744C /* PokemonCell.swift in Sources */,
-				519083C91F3904D800C9AB9B /* PokemonService.swift in Sources */,
+				519083D41F39065E00C9AB9B /* PokemonService.swift in Sources */,
 				C2625FF51F38211E0080744C /* ProfileTableViewController.swift in Sources */,
+				519083D31F39065E00C9AB9B /* KindService.swift in Sources */,
 				C2141A281F38338000296B52 /* Request.swift in Sources */,
 				C2625FDF1F38208E0080744C /* TabBar.swift in Sources */,
 				C2625FE91F3820D30080744C /* PokemonCollectionViewCell.swift in Sources */,
 				C2625FEE1F3820EA0080744C /* Kind.swift in Sources */,
-				519083C71F39039200C9AB9B /* KindService.swift in Sources */,
 				C2625FFF1F38215A0080744C /* Formatter.swift in Sources */,
 				C2625FED1F3820EA0080744C /* Category.swift in Sources */,
 				C2625FF11F38210E0080744C /* PurchaseCell.swift in Sources */,
+				519083D21F39065E00C9AB9B /* CategoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
