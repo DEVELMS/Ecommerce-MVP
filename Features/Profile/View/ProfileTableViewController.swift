@@ -12,6 +12,15 @@ class ProfileTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        customLayout()
+    }
+}
+
+extension ProfileTableViewController {
+
+    func customLayout() {
+    
+        
     }
 }
 

@@ -10,12 +10,12 @@ import UIKit
 
 enum URLS {
     case list
-    case purchase
+    case transaction
     
     var url: String {
         switch self {
         case .list: return "https://private-a37d8e-pokestorm.apiary-mock.com/pokemons"
-        case .purchase: return "https://private-a37d8e-pokestorm.apiary-mock.com/pokemons"
+        case .transaction: return "https://private-57eb9b-transaction7.apiary-mock.com/poke_transaction"
         }
     }
 }
@@ -35,6 +35,7 @@ enum Icons {
 enum Colors {
     case navigation
     case tabbar(type: TabBarState)
+    case section
     
     enum TabBarState {
         case selected
@@ -51,6 +52,7 @@ enum Colors {
             case .unselected: return UIColor(hexadecimal: 0x999999)
             case .background: return UIColor(hexadecimal: 0x000000)
             }
+        case .section: return UIColor(hexadecimal: 0xC81510)
         }
     }
 }
