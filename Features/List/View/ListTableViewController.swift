@@ -56,7 +56,7 @@ extension ListTableViewController {
         
         let priceLabel = UILabel()
         priceLabel.text = "R$ \(Formatter.moneyFormat(value: price))"
-        priceLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        priceLabel.font = UIFont.boldSystemFont(ofSize: 20	)
         priceLabel.textAlignment = .left
         priceLabel.textColor = .black
         priceLabel.adjustsFontSizeToFitWidth = true
