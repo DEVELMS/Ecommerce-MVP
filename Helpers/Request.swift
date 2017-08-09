@@ -6,6 +6,8 @@
 //
 //
 
+import Just
+
 enum Result<T> {
     
     case success(result: T)
@@ -14,17 +16,17 @@ enum Result<T> {
 
 protocol Requesting {
     
-    //func APIRequest(method: HTTPMethod, url: NSString, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void)
+    func APIRequest(method: HTTPMethod, url: String, parameters: [String : Any]?, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void)
 }
 
 final class Request: Requesting {
     
     static let sharedInstance = Request()
-    /*
-    func APIRequest(method: HTTPMethod, url: NSString, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
+    
+    func APIRequest(method: HTTPMethod, url: String, parameters: [String : Any]? = nil, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
         
         switch method {
-        case .GET :
+        case .get :
             
             get(to: url, success: {
                 result in
@@ -33,9 +35,15 @@ final class Request: Requesting {
                 status in
                 failure(status)
             })
-        case .POST :
+        case .post :
             
-            post(to: url, success: {
+            var parameters_: [String : Any] = [:]
+            
+            if let parameters = parameters {
+                parameters_ = parameters
+            }
+            
+            post(to: url, parameters: parameters_, success: {
                 result in
                 success(result)
             }, failure: {
@@ -71,9 +79,9 @@ final class Request: Requesting {
         }
     }
     
-    private func post(to: String, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
+    private func post(to: String, parameters: [String : Any], success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
         
-        Just.post(to) {
+        Just.post(to, params: parameters) {
             r in
             
             if r.ok {
@@ -87,12 +95,11 @@ final class Request: Requesting {
             else {
                 
                 guard let code = r.statusCode else {
-                    return print("get failure without statusCode")
+                    return print("post failure without statusCode")
                 }
                 
                 Do.now { failure(code) }
             }
         }
     }
- */
 }

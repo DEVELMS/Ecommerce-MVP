@@ -12,41 +12,53 @@ class PokemonCell: UITableViewCell {
     
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     
+    var item: CategoryProtocol? {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         customLayout()
     }
 }
 
+// MARK: - Private methods
+
 extension PokemonCell {
 
-    func customLayout() {
+    fileprivate func customLayout() {
         
         let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
-        let cellHeight = 220
-        let cellWidth = cellHeight - 20
+        let cellHeight = 250
+        let cellWidth = Int(UIScreen.main.bounds.size.width)
         
         layout?.scrollDirection = .horizontal
         layout?.itemSize = CGSize(width: cellWidth, height: cellHeight - 1)
     }
 }
 
+// MARK: - Collection view data source
+
 extension PokemonCell: UICollectionViewDataSource {
     
-    // MARK: Collection view data source
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        
+        guard let item = item else { return 0 }
+        return item.pokemons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let item = item else { return UICollectionViewCell() }
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PokemonCollectionViewCell.identifier, for: indexPath) as! PokemonCollectionViewCell
-        cell.fillOutlets()
+        cell.item = item.pokemons[indexPath.row]
         return cell
     }
 }
 
-extension PokemonCell: UICollectionViewDelegate {
-    
-    // MARK: Collection view delegate
-}
+// MARK: - Collection view delegate
+
+extension PokemonCell: UICollectionViewDelegate { }

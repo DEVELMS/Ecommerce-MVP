@@ -8,11 +8,11 @@
 
 import UIKit
 
-class Loader {
+final class Loader {
     
-    let imageView = UIImageView()
-    var images = [#imageLiteral(resourceName: "ring_1"), #imageLiteral(resourceName: "ring_2"), #imageLiteral(resourceName: "ring_3"), #imageLiteral(resourceName: "ring_4"), #imageLiteral(resourceName: "ring_5"), #imageLiteral(resourceName: "ring_6"), #imageLiteral(resourceName: "ring_7"), #imageLiteral(resourceName: "ring_8"), #imageLiteral(resourceName: "ring_9"), #imageLiteral(resourceName: "ring_10"), #imageLiteral(resourceName: "ring_11"), #imageLiteral(resourceName: "ring_12"), #imageLiteral(resourceName: "ring_13"), #imageLiteral(resourceName: "ring_14"), #imageLiteral(resourceName: "ring_15"), #imageLiteral(resourceName: "ring_16"), #imageLiteral(resourceName: "ring_17"), #imageLiteral(resourceName: "ring_18"), #imageLiteral(resourceName: "ring_19"), #imageLiteral(resourceName: "ring_20")]
-    var size = TypeSize.larger
+    fileprivate let imageView = UIImageView()
+    private var images = [#imageLiteral(resourceName: "ring_1"), #imageLiteral(resourceName: "ring_2"), #imageLiteral(resourceName: "ring_3"), #imageLiteral(resourceName: "ring_4"), #imageLiteral(resourceName: "ring_5"), #imageLiteral(resourceName: "ring_6"), #imageLiteral(resourceName: "ring_7"), #imageLiteral(resourceName: "ring_8"), #imageLiteral(resourceName: "ring_9"), #imageLiteral(resourceName: "ring_10"), #imageLiteral(resourceName: "ring_11"), #imageLiteral(resourceName: "ring_12"), #imageLiteral(resourceName: "ring_13"), #imageLiteral(resourceName: "ring_14"), #imageLiteral(resourceName: "ring_15"), #imageLiteral(resourceName: "ring_16"), #imageLiteral(resourceName: "ring_17"), #imageLiteral(resourceName: "ring_18"), #imageLiteral(resourceName: "ring_19"), #imageLiteral(resourceName: "ring_20")]
+    fileprivate var size = TypeSize.larger
     
     enum TypeSize: CGFloat {
 
@@ -26,6 +26,11 @@ class Loader {
         self.size = size
         imageView.animationImages = images
     }
+}
+
+extension Loader {
+
+    // MARK: Public methods
     
     func start(on: UIView) {
         
@@ -39,11 +44,13 @@ class Loader {
         imageView.removeFromSuperview()
     }
     
+    // MARK: Private methods
+    
     private func getLoading(to: UIView) {
         
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-            
+        
         to.addSubview(imageView)
         
         let size: CGFloat = self.size.rawValue

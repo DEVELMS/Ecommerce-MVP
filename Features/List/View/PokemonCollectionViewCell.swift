@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PokemonCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var image: UIImageView!
+    
+    var item: PokemonProtocol? {
+        didSet {
+            self.fillOutlets()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +28,12 @@ class PokemonCollectionViewCell: UICollectionViewCell {
 extension PokemonCollectionViewCell {
 
     func fillOutlets() {
-        self.name.text = "Pikachu"
+        
+        guard let item = item else { return }
+        
+        self.name.text = item.name
+        self.image.sd_setShowActivityIndicatorView(true)
+        self.image.sd_setIndicatorStyle(.white)
+        self.image.sd_setImage(with: URL(string: item.image), placeholderImage: #imageLiteral(resourceName: "placeholder"))
     }
 }

@@ -17,7 +17,7 @@ class TabBar: UITabBarController {
 }
 
 
-// MARK: - Private Methods -
+// MARK: - Private Methods
 
 extension TabBar {
     

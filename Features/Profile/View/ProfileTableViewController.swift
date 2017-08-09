@@ -24,9 +24,9 @@ extension ProfileTableViewController {
     }
 }
 
-extension ProfileTableViewController {
+// MARK: - Table view data source
 
-    // MARK: - Table view data source -
+extension ProfileTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

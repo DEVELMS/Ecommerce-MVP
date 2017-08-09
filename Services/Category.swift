@@ -2,9 +2,10 @@
 //  PageModel.swift
 //  NewsNow
 //
-//  Created by Storm on 07/11/16.
+//  Created by Lucas Soares on 07/11/16.
 //
 //
+
 import Foundation
 
 struct Category {

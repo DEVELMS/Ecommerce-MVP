@@ -15,12 +15,17 @@ final class PurchaseService {
     fileprivate var purchases: RealmSwift.Results<PurchaseRealm>?
     
     init() { dataBase = try! Realm() }
+}
+
+// MARK: - Public methods
+
+extension PurchaseService {
     
     func getPurchases() -> [Purchase] {
         
         guard let dataBase = self.dataBase else { return [Purchase]() }
         
-        purchases = dataBase.objects(PurchaseRealm.self).sorted(byProperty: "date", ascending: false)
+        purchases = dataBase.objects(PurchaseRealm.self).sorted(byKeyPath: "date", ascending: false)
         
         guard let purchases = self.purchases else { return [Purchase]() }
         
@@ -40,8 +45,13 @@ final class PurchaseService {
         
         try! dataBase.write { dataBase.deleteAll() }
     }
+}
+
+// MARK: - Parses
+
+extension PurchaseService {
     
-    private func parsePurchases(purchases: RealmSwift.Results<PurchaseRealm>) -> [Purchase] {
+    fileprivate func parsePurchases(purchases: RealmSwift.Results<PurchaseRealm>) -> [Purchase] {
         
         var parsedPurchases = [Purchase]()
         

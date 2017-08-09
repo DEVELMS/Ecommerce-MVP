@@ -116,7 +116,7 @@ struct Kind {
         case "Dark": option = Option.dark
         case "Steel": option = Option.steel
         case "Fairy": option = Option.fairy
-        default: option = Option.normal
+        default: fatalError("Invalid kind, please check the option enum.")
         }
     }
 }

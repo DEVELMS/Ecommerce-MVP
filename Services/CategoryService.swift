@@ -6,21 +6,44 @@
 //  Copyright © 2017 Lucas M Soares. All rights reserved.
 //
 
-struct CategoryService {
+import SwiftyJSON
+
+final class CategoryService {
     
-    func parseSections(json: JSON) -> [Category] {
+    func getCategories(success: @escaping (_ categories: [Category]) -> Void, fail: @escaping (_ error: String) -> Void) {
         
-        var sections = [Category]()
-        
-        for (_, section) in json {
+        Request.sharedInstance.APIRequest(method: .get, url: URLS.list.url,
+            success: { result in
+                
+                success(self.parseCategories(json: JSON(result)))
+                                            
+            }, failure: { failure in
             
-            sections.append(parseSection(json: section))
+                if failure == 502 {
+                    fail("Desculpe, estamos com problemas no servidor, tente novamente mais tarde.")
+                }
+                else { fail("Parece que sua conexão não está muito boa.") }
+            })
+    }
+}
+
+// MARK: - Parses
+
+extension CategoryService {
+    
+    fileprivate func parseCategories(json: JSON) -> [Category] {
+        
+        var categories = [Category]()
+        
+        for (_, category) in json {
+            
+            categories.append(parseCategory(json: category))
         }
         
-        return sections
+        return categories
     }
     
-    private func parseSection(json: JSON) -> Category {
+    private func parseCategory(json: JSON) -> Category {
         
         let pokemonService = PokemonService()
         
@@ -29,6 +52,6 @@ struct CategoryService {
         let name = json["section"].stringValue
         let pokemons = pokemonService.parsePokemons(json: json["pokemons"])
         
-        return Section(id: id, price: price, name: name, pokemons: pokemons)
+        return Category(id: id, price: price, name: name, pokemons: pokemons)
     }
 }

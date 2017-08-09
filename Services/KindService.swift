@@ -6,6 +6,10 @@
 //  Copyright © 2017 Lucas M Soares. All rights reserved.
 //
 
+import SwiftyJSON
+
+// MARK: - Parses
+
 final class KindService {
     
     func parseKinds(json: JSON) -> [Kind] {
