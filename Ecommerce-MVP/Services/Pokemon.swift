@@ -1,9 +1,9 @@
 //
-//  Video.swift
-//  NewsNow
+//  Pokemon.swift
+//  Ecommerce-MVP
 //
 //  Created by Lucas M Soares on 18/09/16.
-//
+//  Copyright © 2016 DEVELMS. All rights reserved.
 //
 
 struct Pokemon {

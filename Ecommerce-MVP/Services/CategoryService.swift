@@ -12,11 +12,11 @@ final class CategoryService {
     
     func getCategories(success: @escaping (_ categories: [Category]) -> Void, fail: @escaping (_ error: String) -> Void) {
         
-        Request.sharedInstance.APIRequest(method: .get, url: URLS.list.url,
+        Request.sharedInstance.APIRequest(method: .get, url: URL.list.rawValue,
             success: { result in
                 
                 success(self.parseCategories(json: JSON(result)))
-                                            
+                
             }, failure: { failure in
             
                 if failure == 502 {

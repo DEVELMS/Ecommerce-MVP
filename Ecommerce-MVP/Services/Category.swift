@@ -1,9 +1,9 @@
 //
 //  PageModel.swift
-//  NewsNow
+//  Ecommerce-MVP
 //
 //  Created by Lucas Soares on 07/11/16.
-//
+//  Copyright © 2016 DEVELMS. All rights reserved.
 //
 
 import Foundation

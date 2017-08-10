@@ -2,7 +2,7 @@
 //  Purchase.swift
 //  PokeCommerce
 //
-//  Created by Storm on 16/12/16.
+//  Created by Lucas M Soares on 16/12/16.
 //  Copyright © 2016 DEVELMS. All rights reserved.
 //
 

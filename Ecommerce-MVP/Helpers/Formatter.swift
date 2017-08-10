@@ -1,9 +1,9 @@
 //
-//  Characters.swift
-//  NewsNow
+//  Formatter.swift
+//  Helper
 //
-//  Created by Ronilson on 01/12/16.
-//
+//  Created by Lucas M. Soares on 01/12/16.
+//  Copyright © 2017 Lucas M Soares. All rights reserved.
 //
 
 import Foundation

@@ -1,8 +1,8 @@
 //
-//  Type.swift
-//  PokeCommerce
+//  Kind.swift
+//  Ecommerce-MVP
 //
-//  Created by Storm on 13/12/16.
+//  Created by Lucas M Soares on 13/12/16.
 //  Copyright © 2016 DEVELMS. All rights reserved.
 //
 

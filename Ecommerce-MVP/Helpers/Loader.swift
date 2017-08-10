@@ -1,9 +1,9 @@
 //
 //  Loading.swift
-//  Player
+//  Helper
 //
 //  Created by Lucas M. Soares on 05/01/17.
-//
+//  Copyright © 2017 Lucas M Soares. All rights reserved.
 //
 
 import UIKit

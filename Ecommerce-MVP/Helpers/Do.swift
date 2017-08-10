@@ -1,8 +1,8 @@
 //
 //  Do.swift
-//  TicTacToe
+//  Ecommerce-MVP
 //
-//  Created by Storm on 01/11/16.
+//  Created by Lucas M Soares on 01/11/16.
 //  Copyright © 2016 Lucas M Soares. All rights reserved.
 //
 

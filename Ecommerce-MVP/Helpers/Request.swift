@@ -1,18 +1,12 @@
 //
 //  Request.swift
-//  NewsNow
+//  Ecommerce-MVP
 //
 //  Created by Lucas M Soares on 18/09/16.
-//
+//  Copyright © 2017 Lucas M Soares. All rights reserved.
 //
 
 import Just
-
-enum Result<T> {
-    
-    case success(result: T)
-    case failure(error: Int, message: String)
-}
 
 protocol Requesting {
     
@@ -37,13 +31,7 @@ final class Request: Requesting {
             })
         case .post :
             
-            var parameters_: [String : Any] = [:]
-            
-            if let parameters = parameters {
-                parameters_ = parameters
-            }
-            
-            post(to: url, parameters: parameters_, success: {
+            post(to: url, parameters: parameters, success: {
                 result in
                 success(result)
             }, failure: {
@@ -79,9 +67,15 @@ final class Request: Requesting {
         }
     }
     
-    private func post(to: String, parameters: [String : Any], success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
+    private func post(to: String, parameters: [String : Any]? = nil, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
         
-        Just.post(to, params: parameters) {
+        var parameters_: [String : Any] = [:]
+        
+        if let parameters = parameters {
+            parameters_ = parameters
+        }
+        
+        Just.post(to, params: parameters_) {
             r in
             
             if r.ok {
