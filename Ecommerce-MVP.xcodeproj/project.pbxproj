@@ -41,7 +41,6 @@
 		C2B01CF41F39863F001EAE4D /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01CF11F39863F001EAE4D /* Pokemon.swift */; };
 		C2B01CF81F39871A001EAE4D /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01CF61F39871A001EAE4D /* Purchase.swift */; };
 		C2B01CF91F39871A001EAE4D /* PurchaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01CF71F39871A001EAE4D /* PurchaseRealm.swift */; };
-		C2B01D021F3AAED8001EAE4D /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2625FDB1F381FFB0080744C /* Pokemon Solid.ttf */; };
 		C2B01D071F3AD398001EAE4D /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D031F3AD398001EAE4D /* CategoryModel.swift */; };
 		C2B01D081F3AD398001EAE4D /* CategoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D041F3AD398001EAE4D /* CategoryProtocol.swift */; };
 		C2B01D091F3AD398001EAE4D /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D051F3AD398001EAE4D /* PokemonModel.swift */; };
@@ -55,6 +54,7 @@
 		C2B01D1D1F3C132F001EAE4D /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D1C1F3C132F001EAE4D /* DetailPresenter.swift */; };
 		C2B01D1F1F3C13BF001EAE4D /* DetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D1E1F3C13BF001EAE4D /* DetailViewProtocol.swift */; };
 		C2B01D211F3C1D79001EAE4D /* PokemonDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D201F3C1D79001EAE4D /* PokemonDetailModel.swift */; };
+		C2B01D251F3C2302001EAE4D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C248F85F1F2E7D9C004095CA /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,10 +66,9 @@
 		C2141A261F38338000296B52 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Helpers/Request.swift; sourceTree = SOURCE_ROOT; };
 		C248F8501F2E7D9C004095CA /* Ecommerce-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C248F8531F2E7D9C004095CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C248F85A1F2E7D9C004095CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C248F85A1F2E7D9C004095CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		C248F85F1F2E7D9C004095CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C248F8701F2ED390004095CA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C2625FDB1F381FFB0080744C /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pokemon Solid.ttf"; path = "Resources/Fonts/Pokemon Solid.ttf"; sourceTree = SOURCE_ROOT; };
 		C2625FDC1F38208E0080744C /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TabBar.storyboard; path = Features/TabBar/View/TabBar.storyboard; sourceTree = SOURCE_ROOT; };
 		C2625FDD1F38208E0080744C /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = Features/TabBar/View/TabBar.swift; sourceTree = SOURCE_ROOT; };
 		C2625FE01F3820970080744C /* TabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarRouter.swift; path = Features/TabBar/Router/TabBarRouter.swift; sourceTree = SOURCE_ROOT; };
@@ -108,6 +107,7 @@
 		C2B01D1C1F3C132F001EAE4D /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		C2B01D1E1F3C13BF001EAE4D /* DetailViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewProtocol.swift; sourceTree = "<group>"; };
 		C2B01D201F3C1D79001EAE4D /* PokemonDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailModel.swift; sourceTree = "<group>"; };
+		C2B01D221F3C22A6001EAE4D /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,6 @@
 				C248F8A01F3028AF004095CA /* Helpers */,
 				C2625FD91F381F770080744C /* Services */,
 				C248F8741F2ED459004095CA /* Features */,
-				C248F8651F2E7DA9004095CA /* Resources */,
 				C248F8671F2E7F56004095CA /* Supporting Files */,
 			);
 			path = "Ecommerce-MVP";
@@ -159,19 +158,20 @@
 			isa = PBXGroup;
 			children = (
 				C248F8C71F318089004095CA /* Fonts */,
-				C248F85A1F2E7D9C004095CA /* Assets.xcassets */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C248F8671F2E7F56004095CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C248F8651F2E7DA9004095CA /* Resources */,
+				C248F85A1F2E7D9C004095CA /* Assets.xcassets */,
 				C248F8701F2ED390004095CA /* LaunchScreen.storyboard */,
 				C248F8531F2E7D9C004095CA /* AppDelegate.swift */,
 				C248F85F1F2E7D9C004095CA /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C248F8741F2ED459004095CA /* Features */ = {
@@ -370,9 +370,9 @@
 		C248F8C71F318089004095CA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C2625FDB1F381FFB0080744C /* Pokemon Solid.ttf */,
+				C2B01D221F3C22A6001EAE4D /* Pokemon Solid.ttf */,
 			);
-			name = Fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		C2625FD91F381F770080744C /* Services */ = {
@@ -517,13 +517,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2B01D021F3AAED8001EAE4D /* Pokemon Solid.ttf in Resources */,
 				C2625FDE1F38208E0080744C /* TabBar.storyboard in Resources */,
 				C248F8711F2ED390004095CA /* LaunchScreen.storyboard in Resources */,
 				C2625FF41F38211E0080744C /* Profile.storyboard in Resources */,
 				C2B01D191F3C0C8C001EAE4D /* Detail.storyboard in Resources */,
 				C2625FE41F3820B40080744C /* List.storyboard in Resources */,
 				C248F85B1F2E7D9C004095CA /* Assets.xcassets in Resources */,
+				C2B01D251F3C2302001EAE4D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,7 +702,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Ecommerce-MVP/Info.plist";
+				INFOPLIST_FILE = "Ecommerce-MVP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.LMS-DEV.Ecommerce-MVP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -719,7 +719,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Ecommerce-MVP/Info.plist";
+				INFOPLIST_FILE = "Ecommerce-MVP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.LMS-DEV.Ecommerce-MVP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
