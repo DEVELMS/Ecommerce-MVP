@@ -59,7 +59,7 @@ extension PurchaseService {
             
             var parsedPurchase = Purchase(name: purchase.name, price: purchase.price, userName: purchase.userName, cardNumber: purchase.cardNumber, ccv: purchase.ccv, month: purchase.month, year: purchase.year, date: purchase.date)
             
-            if let data = purchase.image as? Data {
+            if let data = purchase.image as Data? {
                 parsedPurchase.image = UIImage(data: data)
             }
             
