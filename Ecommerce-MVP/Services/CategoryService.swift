@@ -19,10 +19,7 @@ final class CategoryService {
                 
             }, failure: { failure in
             
-                if failure == 502 {
-                    fail("Desculpe, estamos com problemas no servidor, tente novamente mais tarde.")
-                }
-                else { fail("Parece que sua conexão não está muito boa.") }
+                fail(failure.description)
             })
     }
 }

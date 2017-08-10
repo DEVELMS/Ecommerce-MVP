@@ -14,7 +14,6 @@
 		5148CF921F3D0BE3002F01F4 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF8B1F3D0BE3002F01F4 /* NSObjectExtension.swift */; };
 		5148CF931F3D0BE3002F01F4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF8C1F3D0BE3002F01F4 /* Request.swift */; };
 		5148CF941F3D0BE3002F01F4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF8D1F3D0BE3002F01F4 /* UIColorExtension.swift */; };
-		5148CF9F1F3D0BF9002F01F4 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF951F3D0BF9002F01F4 /* ApplicationService.swift */; };
 		5148CFA01F3D0BF9002F01F4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF961F3D0BF9002F01F4 /* Category.swift */; };
 		5148CFA11F3D0BF9002F01F4 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF971F3D0BF9002F01F4 /* CategoryService.swift */; };
 		5148CFA21F3D0BFA002F01F4 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF981F3D0BF9002F01F4 /* Kind.swift */; };
@@ -50,6 +49,8 @@
 		5148CFDC1F3D1046002F01F4 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFDB1F3D1046002F01F4 /* TabBarRouter.swift */; };
 		5148CFDF1F3D104C002F01F4 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFDD1F3D104C002F01F4 /* TabBar.storyboard */; };
 		5148CFE01F3D104C002F01F4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFDE1F3D104C002F01F4 /* TabBar.swift */; };
+		5148CFE31F3D11DD002F01F4 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFE21F3D11DD002F01F4 /* RequestError.swift */; };
+		5148CFE51F3D17A5002F01F4 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFE41F3D17A5002F01F4 /* RequestProtocol.swift */; };
 		C248F85B1F2E7D9C004095CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C248F85A1F2E7D9C004095CA /* Assets.xcassets */; };
 		C248F8711F2ED390004095CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C248F8701F2ED390004095CA /* LaunchScreen.storyboard */; };
 		C2B01CDD1F395209001EAE4D /* Just.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CD91F395209001EAE4D /* Just.framework */; };
@@ -65,9 +66,8 @@
 		5148CF891F3D0BE3002F01F4 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		5148CF8A1F3D0BE3002F01F4 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		5148CF8B1F3D0BE3002F01F4 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
-		5148CF8C1F3D0BE3002F01F4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5148CF8C1F3D0BE3002F01F4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = "Ecommerce-MVP/Helpers/Request.swift"; sourceTree = SOURCE_ROOT; };
 		5148CF8D1F3D0BE3002F01F4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		5148CF951F3D0BF9002F01F4 /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationService.swift; path = Services/ApplicationService.swift; sourceTree = "<group>"; };
 		5148CF961F3D0BF9002F01F4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Services/Category.swift; sourceTree = "<group>"; };
 		5148CF971F3D0BF9002F01F4 /* CategoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryService.swift; path = Services/CategoryService.swift; sourceTree = "<group>"; };
 		5148CF981F3D0BF9002F01F4 /* Kind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Kind.swift; path = Services/Kind.swift; sourceTree = "<group>"; };
@@ -103,6 +103,8 @@
 		5148CFDB1F3D1046002F01F4 /* TabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		5148CFDD1F3D104C002F01F4 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		5148CFDE1F3D104C002F01F4 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		5148CFE21F3D11DD002F01F4 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		5148CFE41F3D17A5002F01F4 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		C248F8501F2E7D9C004095CA /* Ecommerce-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C248F85A1F2E7D9C004095CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C248F8701F2ED390004095CA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5148CFE11F3D11B8002F01F4 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				5148CF8C1F3D0BE3002F01F4 /* Request.swift */,
+				5148CFE41F3D17A5002F01F4 /* RequestProtocol.swift */,
+				5148CFE21F3D11DD002F01F4 /* RequestError.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		C248F8471F2E7D9C004095CA = {
 			isa = PBXGroup;
 			children = (
@@ -336,11 +348,11 @@
 		C248F8A01F3028AF004095CA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5148CFE11F3D11B8002F01F4 /* Request */,
 				5148CF871F3D0BE3002F01F4 /* Do.swift */,
 				5148CF881F3D0BE3002F01F4 /* Formatter.swift */,
 				5148CF891F3D0BE3002F01F4 /* General.swift */,
 				5148CF8A1F3D0BE3002F01F4 /* Loader.swift */,
-				5148CF8C1F3D0BE3002F01F4 /* Request.swift */,
 				C248F8A71F302C30004095CA /* Extensions */,
 			);
 			path = Helpers;
@@ -384,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				C2B01CF51F3986B2001EAE4D /* Model */,
-				5148CF951F3D0BF9002F01F4 /* ApplicationService.swift */,
 				5148CF971F3D0BF9002F01F4 /* CategoryService.swift */,
 				5148CF991F3D0BF9002F01F4 /* KindService.swift */,
 				5148CF9B1F3D0BF9002F01F4 /* PokemonService.swift */,
@@ -580,6 +591,7 @@
 				5148CFA61F3D0BFA002F01F4 /* Purchase.swift in Sources */,
 				5148CFAD1F3D0C61002F01F4 /* ListRouterProtocol.swift in Sources */,
 				5148CFA51F3D0BFA002F01F4 /* PokemonService.swift in Sources */,
+				5148CFE31F3D11DD002F01F4 /* RequestError.swift in Sources */,
 				5148CFDC1F3D1046002F01F4 /* TabBarRouter.swift in Sources */,
 				5148CFD01F3D0FC6002F01F4 /* PokemonDetailModel.swift in Sources */,
 				5148CFBE1F3D0C86002F01F4 /* ListTableViewController.swift in Sources */,
@@ -594,11 +606,11 @@
 				5148CFB51F3D0C78002F01F4 /* CategoryModel.swift in Sources */,
 				5148CF8E1F3D0BE3002F01F4 /* Do.swift in Sources */,
 				5148CFA71F3D0BFA002F01F4 /* PurchaseRealm.swift in Sources */,
-				5148CF9F1F3D0BF9002F01F4 /* ApplicationService.swift in Sources */,
 				5148CFD41F3D0FD0002F01F4 /* DetailViewController.swift in Sources */,
 				5148CFBF1F3D0C86002F01F4 /* PokemonCell.swift in Sources */,
 				5148CFCD1F3D0FBB002F01F4 /* DetailPresenter.swift in Sources */,
 				5148CFA21F3D0BFA002F01F4 /* Kind.swift in Sources */,
+				5148CFE51F3D17A5002F01F4 /* RequestProtocol.swift in Sources */,
 				5148CFA11F3D0BF9002F01F4 /* CategoryService.swift in Sources */,
 				5148CFA01F3D0BF9002F01F4 /* Category.swift in Sources */,
 				5148CFB81F3D0C78002F01F4 /* PokemonProtocol.swift in Sources */,

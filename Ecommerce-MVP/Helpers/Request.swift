@@ -8,16 +8,11 @@
 
 import Just
 
-protocol Requesting {
-    
-    func APIRequest(method: HTTPMethod, url: String, parameters: [String : Any]?, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void)
-}
-
 final class Request: Requesting {
     
     static let sharedInstance = Request()
     
-    func APIRequest(method: HTTPMethod, url: String, parameters: [String : Any]? = nil, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
+    func APIRequest(method: HTTPMethod, url: String, parameters: [String : Any]? = nil, success: @escaping (Any) -> Void, failure: @escaping (RequestError) -> Void) {
         
         switch method {
         case .get :
@@ -26,8 +21,8 @@ final class Request: Requesting {
                 result in
                 success(result)
             }, failure: {
-                status in
-                failure(status)
+                error in
+                failure(error)
             })
         case .post :
             
@@ -35,15 +30,15 @@ final class Request: Requesting {
                 result in
                 success(result)
             }, failure: {
-                status in
-                failure(status)
+                error in
+                failure(error)
             })
             
         default: print("HTTPMethod not supported")
         }
     }
     
-    private func get(to: String, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
+    private func get(to: String, success: @escaping (Any) -> Void, failure: @escaping (RequestError) -> Void) {
         
         Just.get(to) {
             r in
@@ -62,12 +57,12 @@ final class Request: Requesting {
                     return print("get failure without statusCode")
                 }
                 
-                Do.now { failure(code) }
+                Do.now { failure(RequestError(code: code)) }
             }
         }
     }
     
-    private func post(to: String, parameters: [String : Any]? = nil, success: @escaping (Any) -> Void, failure: @escaping (Int) -> Void) {
+    private func post(to: String, parameters: [String : Any]? = nil, success: @escaping (Any) -> Void, failure: @escaping (RequestError) -> Void) {
         
         var parameters_: [String : Any] = [:]
         
@@ -92,7 +87,7 @@ final class Request: Requesting {
                     return print("post failure without statusCode")
                 }
                 
-                Do.now { failure(code) }
+                Do.now { failure(RequestError(code: code)) }
             }
         }
     }
