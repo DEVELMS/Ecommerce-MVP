@@ -8,20 +8,18 @@
 
 import Foundation
 
-final class CategoryModel : CategoryProtocol {
+struct CategoryModel : CategoryProtocol {
     
     let name: String
     let price: NSNumber
     var pokemons: [PokemonProtocol]
     
-    var pokemonTapAction: (() -> Void)?
-    
-    init(model: Category, pokemonAction: (() -> Void)? = nil) {
+    init(model: Category) {
         self.name = model.name
         self.price = model.price
         self.pokemons = []
         for pokemon in model.pokemons {
-            self.pokemons.append(PokemonModel(model: pokemon, action: pokemonTapAction))
+            self.pokemons.append(PokemonModel(model: pokemon))
         }
     }
 }
@@ -35,7 +33,7 @@ extension CategoryModel {
         var pokemonsProtocol: [PokemonProtocol] = []
         
         for pokemon in pokemons {
-            pokemonsProtocol.append(PokemonModel(model: pokemon, action: pokemonTapAction))
+            pokemonsProtocol.append(PokemonModel(model: pokemon))
         }
         
         return pokemonsProtocol

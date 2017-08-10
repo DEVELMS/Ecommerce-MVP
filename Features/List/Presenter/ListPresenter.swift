@@ -8,15 +8,17 @@
 
 final class ListPresenter {
 
-    fileprivate unowned let view: ListView
+    fileprivate unowned let view: ListViewProtocol
+    fileprivate let router: ListRouterProtocol
     fileprivate let service: CategoryService
     
     // Storage properties
-    fileprivate(set) var items: [CategoryProtocol] = []
-    private var action: (() -> Void)?
+    fileprivate var items: [Category] = []
+    fileprivate(set) var viewItems: [CategoryProtocol] = []
     
-    init(view: ListView) {
+    init(view: ListViewProtocol) {
         self.view = view
+        self.router = ListRouter()
         self.service = CategoryService()
     }
 }
@@ -37,8 +39,9 @@ extension ListPresenter {
     }
     
     private func storeResults(with: [Category]) {
-        self.items = parseItems(for: with)
-        Do.wait(seconds: 1) { self.showView(for: self.items) }
+        self.items = with
+        self.viewItems = parseItems(for: with)
+        Do.wait(seconds: 1) { self.showView(for: self.viewItems) }
     }
     
     private func requestError(message: String) {
@@ -60,9 +63,7 @@ extension ListPresenter {
         var categoriesProtocol: [CategoryProtocol] = []
         
         for category in categories {
-            categoriesProtocol.append(CategoryModel(model: category) {
-                print("Pokemon tapped")
-            })
+            categoriesProtocol.append(CategoryModel(model: category))
         }
         
         return categoriesProtocol

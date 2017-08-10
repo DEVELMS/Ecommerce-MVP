@@ -56,7 +56,7 @@ extension ListTableViewController {
         
         let priceLabel = UILabel()
         priceLabel.text = "R$ \(Formatter.moneyFormat(value: price))"
-        priceLabel.font = UIFont.boldSystemFont(ofSize: 20	)
+        priceLabel.font = UIFont.boldSystemFont(ofSize: 20)
         priceLabel.textAlignment = .left
         priceLabel.textColor = .black
         priceLabel.adjustsFontSizeToFitWidth = true
@@ -80,7 +80,7 @@ extension ListTableViewController {
             fatalError("Presenter cannot be nil.")
         }
         
-        return presenter.items.count
+        return presenter.viewItems.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,7 +97,7 @@ extension ListTableViewController {
             fatalError("Presenter cannot be nil.")
         }
         
-        return makeHeader(title: presenter.items[section].name, price: presenter.items[section].price)
+        return makeHeader(title: presenter.viewItems[section].name, price: presenter.viewItems[section].price)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -111,14 +111,14 @@ extension ListTableViewController {
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PokemonCell.identifier, for: indexPath) as! PokemonCell
-        cell.item = presenter.items[indexPath.section]
+        cell.item = presenter.viewItems[indexPath.section]
         return cell
     }
 }
 
 // MARK: - List view protocol
 
-extension ListTableViewController: ListView {
+extension ListTableViewController: ListViewProtocol {
 
     func showLoading() {
         spinner.start(on: self.view)
@@ -129,10 +129,7 @@ extension ListTableViewController: ListView {
     }
     
     func reloadTableView() {
-        UIView.transition(with: tableView,
-                          duration: 0.35,
-                          options: .transitionCrossDissolve,
-                          animations: { self.tableView.reloadData() })
+        UIView.transition(with: tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })
     }
     
     func showAlertError(with title: String, message: String, buttonTitle: String) {

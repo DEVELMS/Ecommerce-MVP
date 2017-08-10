@@ -19,10 +19,6 @@ class PokemonCollectionViewCell: UICollectionViewCell {
             self.fillOutlets()
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }
 
 extension PokemonCollectionViewCell {

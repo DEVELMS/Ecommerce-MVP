@@ -31,8 +31,8 @@ extension PokemonCell {
     fileprivate func customLayout() {
         
         let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
-        let cellHeight = 250
-        let cellWidth = Int(UIScreen.main.bounds.size.width)
+        let cellHeight = 230
+        let cellWidth = Int(UIScreen.main.bounds.size.width / 2)
         
         layout?.scrollDirection = .horizontal
         layout?.itemSize = CGSize(width: cellWidth, height: cellHeight - 1)
@@ -61,4 +61,9 @@ extension PokemonCell: UICollectionViewDataSource {
 
 // MARK: - Collection view delegate
 
-extension PokemonCell: UICollectionViewDelegate { }
+extension PokemonCell: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+}

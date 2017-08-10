@@ -6,16 +6,13 @@
 //  Copyright © 2017 Lucas M Soares. All rights reserved.
 //
 
-final class PokemonModel : PokemonProtocol {
+struct PokemonModel : PokemonProtocol {
     
     let name: String
     let image: String
     
-    var tapAction: (() -> Void)?
-    
-    init(model: Pokemon, action: (() -> Void)? = nil) {
+    init(model: Pokemon) {
         self.name = model.name
         self.image = model.image
-        self.tapAction = action
     }
 }
