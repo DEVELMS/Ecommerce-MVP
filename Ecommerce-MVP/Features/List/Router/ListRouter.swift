@@ -10,11 +10,15 @@ import UIKit
 
 final class ListRouter: ListRouterProtocol {
     
-    func showDetail(with: Pokemon) {
-        /*
-        let listController = UIStoryboard(name: "List", bundle: nil).instantiateViewController(withIdentifier: ListTableViewController.identifier) as! ListTableViewController
+    fileprivate unowned var listView: ListViewProtocol
+    
+    init(view: ListViewProtocol) {
+        self.listView = view
+    }
+    
+    func showDetail(with: Pokemon, price: String) {
         
-        tabBar.setViewControllers([listController, profileController], animated: true)
- */
+        let detailRouter = DetailRouter()
+        detailRouter.show(from: listView, with: with, price: price)
     }
 }

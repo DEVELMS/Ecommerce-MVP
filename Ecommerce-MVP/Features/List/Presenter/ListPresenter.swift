@@ -18,12 +18,12 @@ final class ListPresenter {
     
     init(view: ListViewProtocol) {
         self.view = view
-        self.router = ListRouter()
+        self.router = ListRouter(view: view)
         self.service = CategoryService()
     }
 }
 
-// MARK: - Private methods
+// MARK: - Public methods
 
 extension ListPresenter {
     
@@ -38,17 +38,28 @@ extension ListPresenter {
         })
     }
     
-    private func storeResults(with: [Category]) {
+    func itemSelected(section: Int, row: Int) {
+        
+        let item = self.items[section].pokemons[row]
+        router.showDetail(with: item, price: Formatter.moneyFormat(value: self.items[section].price))
+    }
+}
+
+// MARK: - Private methods
+
+extension ListPresenter {
+
+    fileprivate func storeResults(with: [Category]) {
         self.items = with
         self.viewItems = parseItems(for: with)
         Do.wait(seconds: 1) { self.showView(for: self.viewItems) }
     }
     
-    private func requestError(message: String) {
+    fileprivate func requestError(message: String) {
         view.showAlertError(with: "Error", message: message, buttonTitle: "OK")
     }
     
-    private func showView(for category: [CategoryProtocol]) {
+    fileprivate func showView(for category: [CategoryProtocol]) {
         view.hideLoading()
         view.reloadTableView()
     }

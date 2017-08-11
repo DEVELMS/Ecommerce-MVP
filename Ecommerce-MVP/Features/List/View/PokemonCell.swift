@@ -12,6 +12,9 @@ class PokemonCell: UITableViewCell {
     
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     
+    var listView: ListViewProtocol?
+    var section: Int?
+    
     var item: CategoryProtocol? {
         didSet {
             self.collectionView.reloadData()
@@ -65,5 +68,10 @@ extension PokemonCell: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        guard let section = section else {
+            fatalError("Section cannot be nil")
+        }
+        
+        listView?.itemSelected(at: IndexPath(row: indexPath.row, section: section))
     }
 }

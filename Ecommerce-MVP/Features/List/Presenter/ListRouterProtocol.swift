@@ -8,5 +8,5 @@
 
 protocol ListRouterProtocol: class {
     
-    func showDetail(with: Pokemon)
+    func showDetail(with: Pokemon, price: String)
 }

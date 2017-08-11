@@ -19,11 +19,12 @@ class ListTableViewController: UITableViewController {
         super.viewDidLoad()
         presenter = ListPresenter(view: self)
         presenter?.showList()
+        navigationBarLayout()
+        tableLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableLayout()
     }
 }
 
@@ -31,12 +32,15 @@ class ListTableViewController: UITableViewController {
 
 extension ListTableViewController {
     
-    fileprivate func tableLayout() {
-        tableView.tableFooterView = UIView(frame: .zero)
-        //tableView.contentInset.top = UIApplication.shared.statusBarFrame.height
+    fileprivate func navigationBarLayout() {
+        self.title = "Shop"
     }
     
-    func makeHeader(title: String, price: NSNumber) -> UIView {
+    fileprivate func tableLayout() {
+        tableView.tableFooterView = UIView(frame: .zero)
+    }
+    
+    fileprivate func makeHeader(title: String, price: NSNumber) -> UIView {
 
         let header = UIView()
         header.backgroundColor = .white
@@ -55,7 +59,7 @@ extension ListTableViewController {
         titleLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 12).isActive = true
         
         let priceLabel = UILabel()
-        priceLabel.text = "R$ \(Formatter.moneyFormat(value: price))"
+        priceLabel.text = "\(Formatter.moneyFormat(value: price))"
         priceLabel.font = UIFont.boldSystemFont(ofSize: 20)
         priceLabel.textAlignment = .left
         priceLabel.textColor = .black
@@ -111,6 +115,8 @@ extension ListTableViewController {
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PokemonCell.identifier, for: indexPath) as! PokemonCell
+        cell.listView = self
+        cell.section = indexPath.section
         cell.item = presenter.viewItems[indexPath.section]
         return cell
     }
@@ -132,8 +138,19 @@ extension ListTableViewController: ListViewProtocol {
         UIView.transition(with: tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })
     }
     
+    func itemSelected(at: IndexPath) {
+        presenter?.itemSelected(section: at.section, row: at.row)
+    }
+    
+    func showDetailView(viewController: UIViewController) {
+        self.navigationController?.show(viewController, sender: nil)
+    }
+    
     func showAlertError(with title: String, message: String, buttonTitle: String) {
         
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .destructive, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

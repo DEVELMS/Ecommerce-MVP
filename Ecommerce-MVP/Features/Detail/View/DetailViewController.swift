@@ -10,60 +10,33 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var background: UIImageView!
-    @IBOutlet weak var pokemonDescription: UILabel!
-    @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var pokemonImage: UIImageView!
-    @IBOutlet weak var types: UILabel!
-    @IBOutlet weak var weakness: UILabel!
-    @IBOutlet weak var typesBotMargin: NSLayoutConstraint!
-    @IBOutlet weak var weaknessBotMargin: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var background: UIImageView!
+    @IBOutlet fileprivate weak var pokemonDescription: UILabel!
+    @IBOutlet fileprivate weak var price: UILabel!
+    @IBOutlet fileprivate weak var pokemonImage: UIImageView!
+    @IBOutlet fileprivate weak var types: UILabel!
+    @IBOutlet fileprivate weak var weakness: UILabel!
+    @IBOutlet fileprivate weak var typesBotMargin: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var weaknessBotMargin: NSLayoutConstraint!
     
-    var pokemon: Pokemon?
-    var priceString = String()
+    var presenter: DetailPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setContent()
-    }
-    
-    private func setContent() {
-        
-        guard let pokemon = self.pokemon else {
-            return print("pokemon detail nil")
-        }
-        
-        self.title = pokemon.name
-        self.pokemonDescription.text = pokemon.description
-        self.price.text = priceString
-        
-        self.pokemonImage.sd_setShowActivityIndicatorView(true)
-        self.pokemonImage.sd_setIndicatorStyle(.white)
-        self.pokemonImage.sd_setImage(with: URL(string: pokemon.image), placeholderImage: #imageLiteral(resourceName: "placeholder"))
+        presenter?.fillViewOutlets()
+        self.hidesBottomBarWhenPushed = true
     }
 }
 
-extension DetailViewController: DetailViewProtocol {
+// MARK: Private methods
+
+extension DetailViewController {
     
-    func updateBackground(image: UIImage) {
-        
+    fileprivate func updateBackground(image: UIImage) {
         self.background.image = image
-        /*
-        if types.contains(where: { $0.option == Kind.Option.fire }) {
-            self.background.image = #imageLiteral(resourceName: "fire-background")
-        }
-        else if types.contains(where: { $0.option == Kind.Option.flying }) {
-            self.background.image = #imageLiteral(resourceName: "sky-background")
-        }
-        else if types.contains(where: { $0.option == Kind.Option.water }) {
-            self.background.image = #imageLiteral(resourceName: "water-background")
-        }
-        else { self.background.image = #imageLiteral(resourceName: "default-background") }
-        */
     }
     
-    func showTypes(images: [UIImage]) {
+    fileprivate func showTypes(images: [UIImage]) {
         
         var y: CGFloat = 25
         let margins = self.view.layoutMarginsGuide
@@ -86,7 +59,7 @@ extension DetailViewController: DetailViewProtocol {
         }
     }
     
-    func showWeakness(images: [UIImage]) {
+    fileprivate func showWeakness(images: [UIImage]) {
         
         var y: CGFloat = 25
         let margins = self.view.layoutMarginsGuide
@@ -107,5 +80,23 @@ extension DetailViewController: DetailViewProtocol {
             
             y += 25
         }
+    }
+}
+
+extension DetailViewController: DetailViewProtocol {
+    
+    func fillViewOutlets(item: DetailModel) {
+        
+        self.title = item.name
+        self.pokemonDescription.text = item.description
+        self.price.text = item.price
+        
+        self.pokemonImage.sd_setShowActivityIndicatorView(true)
+        self.pokemonImage.sd_setIndicatorStyle(.white)
+        self.pokemonImage.sd_setImage(with: URL(string: item.image), placeholderImage: #imageLiteral(resourceName: "placeholder"))
+        
+        self.updateBackground(image: item.background)
+        self.showTypes(images: item.types)
+        self.showWeakness(images: item.weakness)
     }
 }

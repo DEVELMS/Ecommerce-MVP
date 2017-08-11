@@ -10,7 +10,5 @@ import UIKit
 
 protocol DetailViewProtocol : class {
     
-    func updateBackground(image: UIImage)
-    func showTypes(images: [UIImage])
-    func showWeakness(images: [UIImage])
+    func fillViewOutlets(item: DetailModel)
 }
