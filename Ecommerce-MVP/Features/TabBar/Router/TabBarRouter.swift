@@ -14,7 +14,7 @@ final class TabBarRouter {
         
         guard let window = at else { fatalError("Window cannot be nil") }
         
-        let tabBar = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as! TabBar
+        let tabBar = TabBar()
         
         let listController = UIStoryboard(name: "List", bundle: nil).instantiateViewController(withIdentifier: ListTableViewController.identifier) as! ListTableViewController
         
