@@ -64,7 +64,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buy:" destination="81C-hd-KN0" eventType="touchUpInside" id="Pwq-0b-oHC"/>
+                                    <action selector="buyTapped:" destination="81C-hd-KN0" eventType="touchUpInside" id="vTF-I7-XKU"/>
                                 </connections>
                             </button>
                         </subviews>

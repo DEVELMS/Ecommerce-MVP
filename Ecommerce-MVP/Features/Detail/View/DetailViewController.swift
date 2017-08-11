@@ -83,6 +83,14 @@ extension DetailViewController {
     }
 }
 
+// MARK: Actions
+
+extension DetailViewController {
+    
+    @IBAction func buyTapped(_ sender: UIButton) {
+    }
+}
+
 extension DetailViewController: DetailViewProtocol {
     
     func fillViewOutlets(item: DetailModel) {

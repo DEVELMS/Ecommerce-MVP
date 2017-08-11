@@ -10,10 +10,10 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    fileprivate lazy var spinner = Loader(size: .larger)
     fileprivate var presenter: ListPresenter?
-    fileprivate var sectionHeight = CGFloat(70)
     fileprivate var rowHeight = CGFloat(250)
+    fileprivate var sectionHeight = CGFloat(70)
+    fileprivate lazy var spinner = Loader(size: .larger)
     
     override func viewDidLoad() {
         super.viewDidLoad()
