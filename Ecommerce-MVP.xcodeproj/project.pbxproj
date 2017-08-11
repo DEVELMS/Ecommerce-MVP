@@ -36,7 +36,6 @@
 		5148CFBF1F3D0C86002F01F4 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFBB1F3D0C86002F01F4 /* PokemonCell.swift */; };
 		5148CFC01F3D0C86002F01F4 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFBC1F3D0C86002F01F4 /* PokemonCollectionViewCell.swift */; };
 		5148CFC41F3D0E4B002F01F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFC31F3D0E4B002F01F4 /* AppDelegate.swift */; };
-		5148CFC81F3D0F11002F01F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFC71F3D0F11002F01F4 /* LaunchScreen.storyboard */; };
 		5148CFCA1F3D0F77002F01F4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFC91F3D0F77002F01F4 /* Info.plist */; };
 		5148CFCD1F3D0FBB002F01F4 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFCB1F3D0FBB002F01F4 /* DetailPresenter.swift */; };
 		5148CFCE1F3D0FBB002F01F4 /* DetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFCC1F3D0FBB002F01F4 /* DetailViewProtocol.swift */; };
@@ -52,12 +51,12 @@
 		5148CFE31F3D11DD002F01F4 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFE21F3D11DD002F01F4 /* RequestError.swift */; };
 		5148CFE51F3D17A5002F01F4 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFE41F3D17A5002F01F4 /* RequestProtocol.swift */; };
 		C248F85B1F2E7D9C004095CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C248F85A1F2E7D9C004095CA /* Assets.xcassets */; };
-		C248F8711F2ED390004095CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C248F8701F2ED390004095CA /* LaunchScreen.storyboard */; };
 		C2B01CDD1F395209001EAE4D /* Just.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CD91F395209001EAE4D /* Just.framework */; };
 		C2B01CDE1F395209001EAE4D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CDA1F395209001EAE4D /* Realm.framework */; };
 		C2B01CDF1F395209001EAE4D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CDB1F395209001EAE4D /* RealmSwift.framework */; };
 		C2B01CE01F395209001EAE4D /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CDC1F395209001EAE4D /* SDWebImage.framework */; };
 		C2B01CE81F395A4E001EAE4D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CE71F395A4E001EAE4D /* SwiftyJSON.framework */; };
+		C2B01D2B1F3D476E001EAE4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B01D2A1F3D476E001EAE4D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,7 +89,6 @@
 		5148CFBB1F3D0C86002F01F4 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonCell.swift; path = View/PokemonCell.swift; sourceTree = "<group>"; };
 		5148CFBC1F3D0C86002F01F4 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonCollectionViewCell.swift; path = View/PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 		5148CFC31F3D0E4B002F01F4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5148CFC71F3D0F11002F01F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5148CFC91F3D0F77002F01F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5148CFCB1F3D0FBB002F01F4 /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPresenter.swift; path = "Ecommerce-MVP/Features/Detail/Presenter/DetailPresenter.swift"; sourceTree = SOURCE_ROOT; };
 		5148CFCC1F3D0FBB002F01F4 /* DetailViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewProtocol.swift; path = "Ecommerce-MVP/Features/Detail/Presenter/DetailViewProtocol.swift"; sourceTree = SOURCE_ROOT; };
@@ -107,13 +105,13 @@
 		5148CFE41F3D17A5002F01F4 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		C248F8501F2E7D9C004095CA /* Ecommerce-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C248F85A1F2E7D9C004095CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C248F8701F2ED390004095CA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2B01CD91F395209001EAE4D /* Just.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Just.framework; path = Carthage/Build/iOS/Just.framework; sourceTree = "<group>"; };
 		C2B01CDA1F395209001EAE4D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		C2B01CDB1F395209001EAE4D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		C2B01CDC1F395209001EAE4D /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		C2B01CE71F395A4E001EAE4D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		C2B01D221F3C22A6001EAE4D /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		C2B01D2A1F3D476E001EAE4D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +181,7 @@
 			children = (
 				C248F8651F2E7DA9004095CA /* Resources */,
 				C248F85A1F2E7D9C004095CA /* Assets.xcassets */,
-				5148CFC71F3D0F11002F01F4 /* LaunchScreen.storyboard */,
+				C2B01D2A1F3D476E001EAE4D /* LaunchScreen.storyboard */,
 				5148CFC31F3D0E4B002F01F4 /* AppDelegate.swift */,
 				5148CFC91F3D0F77002F01F4 /* Info.plist */,
 			);
@@ -533,11 +531,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5148CFC81F3D0F11002F01F4 /* LaunchScreen.storyboard in Resources */,
 				5148CFDF1F3D104C002F01F4 /* TabBar.storyboard in Resources */,
 				5148CFCA1F3D0F77002F01F4 /* Info.plist in Resources */,
 				5148CFD31F3D0FD0002F01F4 /* Detail.storyboard in Resources */,
-				C248F8711F2ED390004095CA /* LaunchScreen.storyboard in Resources */,
+				C2B01D2B1F3D476E001EAE4D /* LaunchScreen.storyboard in Resources */,
 				5148CFBD1F3D0C86002F01F4 /* List.storyboard in Resources */,
 				5148CFD71F3D1015002F01F4 /* Profile.storyboard in Resources */,
 				C248F85B1F2E7D9C004095CA /* Assets.xcassets in Resources */,
