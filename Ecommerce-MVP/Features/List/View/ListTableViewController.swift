@@ -10,21 +10,21 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    fileprivate var presenter: ListPresenter?
+    var presenter: ListPresenter?
     fileprivate var rowHeight = CGFloat(250)
-    fileprivate var sectionHeight = CGFloat(70)
+    fileprivate var sectionHeight = CGFloat(50)
     fileprivate lazy var spinner = Loader(size: .larger)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = ListPresenter(view: self)
         presenter?.showList()
-        navigationBarLayout()
-        tableLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationBarLayout()
+        tableLayout()
+        customLayout()
     }
 }
 
@@ -32,45 +32,19 @@ class ListTableViewController: UITableViewController {
 
 extension ListTableViewController {
     
+    fileprivate func customLayout() {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     fileprivate func navigationBarLayout() {
-        self.title = "Shop"
+        
+        self.navigationItem.title = "Póke-Shop"
+        self.navigationController?.navigationBar.barTintColor = Colors.navigation.color
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "PokemonSolidNormal", size: 25) ?? UIFont.boldSystemFont(ofSize: 25), NSForegroundColorAttributeName: UIColor.white];
     }
     
     fileprivate func tableLayout() {
         tableView.tableFooterView = UIView(frame: .zero)
-    }
-    
-    fileprivate func makeHeader(title: String, price: NSNumber) -> UIView {
-
-        let header = UIView()
-        header.backgroundColor = .white
-        let margins = header.layoutMarginsGuide
-        
-        let titleLabel = UILabel()
-        titleLabel.text = title
-        titleLabel.font = UIFont.systemFont(ofSize: 18)
-        titleLabel.textAlignment = .left
-        titleLabel.textColor = .darkGray
-        titleLabel.adjustsFontSizeToFitWidth = true
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(titleLabel)
-        
-        titleLabel.topAnchor.constraint(equalTo: margins.topAnchor, constant: 10).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 12).isActive = true
-        
-        let priceLabel = UILabel()
-        priceLabel.text = "\(Formatter.moneyFormat(value: price))"
-        priceLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        priceLabel.textAlignment = .left
-        priceLabel.textColor = .black
-        priceLabel.adjustsFontSizeToFitWidth = true
-        priceLabel.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(priceLabel)
-        
-        priceLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
-        priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
-        
-        return header
     }
 }
 
@@ -101,7 +75,9 @@ extension ListTableViewController {
             fatalError("Presenter cannot be nil.")
         }
         
-        return makeHeader(title: presenter.viewItems[section].name, price: presenter.viewItems[section].price)
+        let header = tableView.dequeueReusableCell(withIdentifier: SectionCell.identifier) as! SectionCell
+        header.item = presenter.viewItems[section]
+        return header
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

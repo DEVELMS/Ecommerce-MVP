@@ -35,10 +35,10 @@ enum RequestError {
     
     init(code: Int) {
         switch code {
-        case 400: self = .generic
-        case 403: self = .generic
-        case 502: self = .generic
-        case 504: self = .generic
+        case 400: self = .invalidRequisition
+        case 403: self = .noAutorized
+        case 502: self = .badGateway
+        case 504: self = .timeOut
         default: self = .generic
         }
     }

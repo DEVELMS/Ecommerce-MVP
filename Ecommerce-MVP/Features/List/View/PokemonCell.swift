@@ -35,7 +35,7 @@ extension PokemonCell {
         
         let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         let cellHeight = 230
-        let cellWidth = Int(UIScreen.main.bounds.size.width / 2)
+        let cellWidth = Int(UIScreen.main.bounds.size.width * 2/3)
         
         layout?.scrollDirection = .horizontal
         layout?.itemSize = CGSize(width: cellWidth, height: cellHeight - 1)

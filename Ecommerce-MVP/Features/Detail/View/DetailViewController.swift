@@ -24,13 +24,22 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.fillViewOutlets()
-        self.hidesBottomBarWhenPushed = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.customLayout()
     }
 }
 
 // MARK: Private methods
 
 extension DetailViewController {
+    
+    fileprivate func customLayout() {
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.navigationBar.tintColor = .white
+    }
     
     fileprivate func updateBackground(image: UIImage) {
         self.background.image = image

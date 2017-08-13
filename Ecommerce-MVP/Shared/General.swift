@@ -38,7 +38,7 @@ enum Colors {
     
     var color: UIColor {
         switch self {
-        case .navigation: return UIColor(hexadecimal: 0x000000)
+        case .navigation: return UIColor(hexadecimal: 0xf23937)
         case .tabbar(let type):
             switch type {
             case .selected: return UIColor(hexadecimal: 0xFFFFFF)

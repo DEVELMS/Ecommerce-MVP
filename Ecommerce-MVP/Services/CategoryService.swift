@@ -12,7 +12,7 @@ final class CategoryService {
     
     func getCategories(success: @escaping (_ categories: [Category]) -> Void, fail: @escaping (_ error: String) -> Void) {
         
-        Request.sharedInstance.APIRequest(method: .get, url: UrlApi.list.rawValue,
+        RequestManager.shared.APIRequest(method: .get, url: UrlApi.list.rawValue,
             success: { result in
                 
                 success(self.parseCategories(json: JSON(result)))
@@ -42,12 +42,10 @@ extension CategoryService {
     
     private func parseCategory(json: JSON) -> Category {
         
-        let pokemonService = PokemonService()
-        
         let id = json["id"].intValue
         let price = json["price"].numberValue
         let name = json["section"].stringValue
-        let pokemons = pokemonService.parsePokemons(json: json["pokemons"])
+        let pokemons = PokemonService().parsePokemons(json: json["pokemons"])
         
         return Category(id: id, price: price, name: name, pokemons: pokemons)
     }

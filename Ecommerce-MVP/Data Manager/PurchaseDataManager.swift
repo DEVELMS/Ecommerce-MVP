@@ -1,5 +1,5 @@
 //
-//  PurchaseService.swift
+//  PurchaseDataManager.swift
 //  Ecommerce-MVP
 //
 //  Created by Lucas Soares on 07/08/17.
@@ -9,7 +9,7 @@
 import RealmSwift
 import UIKit
 
-final class PurchaseService {
+final class PurchaseDataManager {
     
     fileprivate var dataBase: Realm?
     fileprivate var purchases: RealmSwift.Results<PurchaseRealm>?
@@ -19,7 +19,7 @@ final class PurchaseService {
 
 // MARK: - Public methods
 
-extension PurchaseService {
+extension PurchaseDataManager {
     
     func getPurchases() -> [Purchase] {
         
@@ -39,7 +39,7 @@ extension PurchaseService {
         try! dataBase.write { dataBase.delete(purchaseToDelete) }
     }
     
-    func clean() {
+    func removeAll() {
         
         guard let dataBase = self.dataBase else { return }
         
@@ -49,7 +49,7 @@ extension PurchaseService {
 
 // MARK: - Parses
 
-extension PurchaseService {
+extension PurchaseDataManager {
     
     fileprivate func parsePurchases(purchases: RealmSwift.Results<PurchaseRealm>) -> [Purchase] {
         

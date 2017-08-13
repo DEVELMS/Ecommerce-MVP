@@ -14,13 +14,17 @@ class ProfileTableViewController: UITableViewController {
         super.viewDidLoad()
         customLayout()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.customLayout()
+    }
 }
 
 extension ProfileTableViewController {
 
     func customLayout() {
-    
-        
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 
