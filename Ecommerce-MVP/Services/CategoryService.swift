@@ -15,7 +15,7 @@ final class CategoryService {
         RequestManager.shared.APIRequest(method: .get, url: UrlApi.list.rawValue,
             success: { result in
                 
-                success(self.parseCategories(json: JSON(result)))
+                success(self.parseCategories(json: JSON(result).arrayValue))
                 
             }, failure: { failure in
             
@@ -28,16 +28,8 @@ final class CategoryService {
 
 extension CategoryService {
     
-    fileprivate func parseCategories(json: JSON) -> [Category] {
-        
-        var categories = [Category]()
-        
-        for (_, category) in json {
-            
-            categories.append(parseCategory(json: category))
-        }
-        
-        return categories
+    fileprivate func parseCategories(json: [JSON]) -> [Category] {
+        return json.flatMap { parseCategory(json: $0) }
     }
     
     private func parseCategory(json: JSON) -> Category {
@@ -45,7 +37,7 @@ extension CategoryService {
         let id = json["id"].intValue
         let price = json["price"].numberValue
         let name = json["section"].stringValue
-        let pokemons = PokemonService().parsePokemons(json: json["pokemons"])
+        let pokemons = PokemonService().parsePokemons(json: json["pokemons"].arrayValue)
         
         return Category(id: id, price: price, name: name, pokemons: pokemons)
     }

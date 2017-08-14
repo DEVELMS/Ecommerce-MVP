@@ -1,29 +1,12 @@
 //
-//  General.swift
-//  Helper
+//  Colors.swift
+//  Ecommerce-MVP
 //
-//  Created by Lucas M Soares on 01/08/17.
+//  Created by Lucas M Soares on 14/08/17.
 //  Copyright © 2017 Lucas M Soares. All rights reserved.
 //
 
 import UIKit
-
-enum UrlApi: String {
-    case list = "https://private-a37d8e-pokestorm.apiary-mock.com/pokemons"
-    case transaction = "https://private-57eb9b-transaction7.apiary-mock.com/poke_transaction"
-}
-
-enum Icons {
-    case list
-    case profile
-    
-    var image: UIImage {
-        switch self {
-        case .list: return #imageLiteral(resourceName: "shop-icon")
-        case .profile: return #imageLiteral(resourceName: "profile-icon")
-        }
-    }
-}
 
 enum Colors {
     case navigation

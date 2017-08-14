@@ -12,16 +12,8 @@ import SwiftyJSON
 
 final class PokemonService {
     
-    func parsePokemons(json: JSON) -> [Pokemon] {
-        
-        var pokemons = [Pokemon]()
-        
-        for (_, pokemon) in json {
-            
-            pokemons.append(parsePokemon(json: pokemon))
-        }
-        
-        return pokemons
+    func parsePokemons(json: [JSON]) -> [Pokemon] {
+        return json.flatMap { parsePokemon(json: $0) }
     }
     
     private func parsePokemon(json: JSON) -> Pokemon {
@@ -30,8 +22,8 @@ final class PokemonService {
         
         let id = json["id"].intValue
         let name = json["name"].stringValue
-        let types = kindService.parseKinds(json: json["types"])
-        let weakness = kindService.parseKinds(json: json["weakness"])
+        let types = kindService.parseKinds(json: json["types"].arrayValue)
+        let weakness = kindService.parseKinds(json: json["weakness"].arrayValue)
         let description = json["description"].stringValue
         let image = json["image"].stringValue
         

@@ -11,4 +11,5 @@ import UIKit
 protocol DetailViewProtocol : class {
     
     func fillViewOutlets(item: DetailModel)
+    func presentStoreView(viewController: UIViewController)
 }

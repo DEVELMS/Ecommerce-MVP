@@ -11,13 +11,15 @@ import UIKit
 final class DetailPresenter {
 
     fileprivate unowned let view: DetailViewProtocol
+    fileprivate let router: DetailRouterProtocol
     
     // Storage properties
     fileprivate var viewItem: DetailModel?
     let item: Pokemon
     let price: String
     
-    init(view: DetailViewProtocol, item: Pokemon, price: String) {
+    init(view: DetailViewProtocol, router: DetailRouterProtocol, item: Pokemon, price: String) {
+        self.router = router
         self.view = view
         self.item = item
         self.price = price
@@ -37,6 +39,10 @@ extension DetailPresenter {
         }
         
         view.fillViewOutlets(item: viewItem)
+    }
+    
+    func buyItem() {
+        router.presentStore(with: item)
     }
 }
 

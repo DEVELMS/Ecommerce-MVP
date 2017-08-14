@@ -26,6 +26,6 @@ extension SectionCell {
         guard let item = item else { fatalError("Item cannot be nil") }
         
         self.sectionTitle.text = item.name
-        self.price.text = Formatter.moneyFormat(value: item.price)
+        self.price.text = item.price
     }
 }

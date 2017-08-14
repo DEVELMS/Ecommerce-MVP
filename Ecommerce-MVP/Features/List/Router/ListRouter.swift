@@ -8,14 +8,19 @@
 
 import UIKit
 
-final class ListRouter: ListRouterProtocol {
+final class ListRouter {
     
     fileprivate unowned var listView: ListViewProtocol
     
     init(view: ListViewProtocol) {
         self.listView = view
     }
-    
+}
+
+// MARK: Routes
+
+extension ListRouter: ListRouterProtocol {
+
     func showDetail(with: Pokemon, price: String) {
         
         let detailRouter = DetailRouter()

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5148CF8E1F3D0BE3002F01F4 /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF871F3D0BE3002F01F4 /* Do.swift */; };
-		5148CF8F1F3D0BE3002F01F4 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF881F3D0BE3002F01F4 /* Formatter.swift */; };
-		5148CF901F3D0BE3002F01F4 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF891F3D0BE3002F01F4 /* General.swift */; };
 		5148CF911F3D0BE3002F01F4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF8A1F3D0BE3002F01F4 /* Loader.swift */; };
 		5148CF921F3D0BE3002F01F4 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF8B1F3D0BE3002F01F4 /* NSObjectExtension.swift */; };
 		5148CF941F3D0BE3002F01F4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CF8D1F3D0BE3002F01F4 /* UIColorExtension.swift */; };
@@ -62,12 +60,16 @@
 		C2B01D441F40F851001EAE4D /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D3F1F40F851001EAE4D /* Pokemon.swift */; };
 		C2B01D451F40F851001EAE4D /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D401F40F851001EAE4D /* Purchase.swift */; };
 		C2B01D461F40F851001EAE4D /* PurchaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D411F40F851001EAE4D /* PurchaseRealm.swift */; };
+		C2B01D491F411C02001EAE4D /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B01D481F411C02001EAE4D /* Store.storyboard */; };
+		C2B01D4C1F416014001EAE4D /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D4B1F416014001EAE4D /* StorePresenter.swift */; };
+		C2B01D4E1F4161DD001EAE4D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D4D1F4161DD001EAE4D /* Colors.swift */; };
+		C2B01D501F4161F8001EAE4D /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D4F1F4161F8001EAE4D /* Url.swift */; };
+		C2B01D531F4171D0001EAE4D /* StoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D521F4171D0001EAE4D /* StoreRouter.swift */; };
+		C2B01D551F4175A6001EAE4D /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B01D541F4175A6001EAE4D /* StoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5148CF871F3D0BE3002F01F4 /* Do.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Do.swift; sourceTree = "<group>"; };
-		5148CF881F3D0BE3002F01F4 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
-		5148CF891F3D0BE3002F01F4 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		5148CF8A1F3D0BE3002F01F4 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		5148CF8B1F3D0BE3002F01F4 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		5148CF8D1F3D0BE3002F01F4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -121,6 +123,12 @@
 		C2B01D3F1F40F851001EAE4D /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pokemon.swift; path = Features/Model/Pokemon.swift; sourceTree = "<group>"; };
 		C2B01D401F40F851001EAE4D /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Purchase.swift; path = Features/Model/Purchase.swift; sourceTree = "<group>"; };
 		C2B01D411F40F851001EAE4D /* PurchaseRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseRealm.swift; path = Features/Model/PurchaseRealm.swift; sourceTree = "<group>"; };
+		C2B01D481F411C02001EAE4D /* Store.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		C2B01D4B1F416014001EAE4D /* StorePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
+		C2B01D4D1F4161DD001EAE4D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C2B01D4F1F4161F8001EAE4D /* Url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		C2B01D521F4171D0001EAE4D /* StoreRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreRouter.swift; sourceTree = "<group>"; };
+		C2B01D541F4175A6001EAE4D /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,8 +287,12 @@
 		C248F87B1F2ED48F004095CA /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				C2B01D511F4171B6001EAE4D /* Router */,
+				C2B01D4A1F415FFC001EAE4D /* Presenter */,
+				C2B01D471F411BED001EAE4D /* View */,
 			);
 			name = Store;
+			path = Features/Store;
 			sourceTree = "<group>";
 		};
 		C248F8801F2ED73D004095CA /* Cell */ = {
@@ -362,9 +374,9 @@
 			isa = PBXGroup;
 			children = (
 				C248F8A71F302C30004095CA /* Extensions */,
-				5148CF891F3D0BE3002F01F4 /* General.swift */,
+				C2B01D4D1F4161DD001EAE4D /* Colors.swift */,
+				C2B01D4F1F4161F8001EAE4D /* Url.swift */,
 				5148CF871F3D0BE3002F01F4 /* Do.swift */,
-				5148CF881F3D0BE3002F01F4 /* Formatter.swift */,
 				5148CF8A1F3D0BE3002F01F4 /* Loader.swift */,
 			);
 			path = Shared;
@@ -494,6 +506,31 @@
 			path = "Data Manager";
 			sourceTree = "<group>";
 		};
+		C2B01D471F411BED001EAE4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2B01D481F411C02001EAE4D /* Store.storyboard */,
+				C2B01D541F4175A6001EAE4D /* StoreViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2B01D4A1F415FFC001EAE4D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C2B01D4B1F416014001EAE4D /* StorePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C2B01D511F4171B6001EAE4D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C2B01D521F4171D0001EAE4D /* StoreRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -558,6 +595,7 @@
 				5148CFD31F3D0FD0002F01F4 /* Detail.storyboard in Resources */,
 				C2B01D2B1F3D476E001EAE4D /* LaunchScreen.storyboard in Resources */,
 				5148CFBD1F3D0C86002F01F4 /* List.storyboard in Resources */,
+				C2B01D491F411C02001EAE4D /* Store.storyboard in Resources */,
 				C2B01D371F3FB00D001EAE4D /* PokemonSolid-Normal.ttf in Resources */,
 				5148CFD71F3D1015002F01F4 /* Profile.storyboard in Resources */,
 				C248F85B1F2E7D9C004095CA /* Assets.xcassets in Resources */,
@@ -597,11 +635,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B01D4C1F416014001EAE4D /* StorePresenter.swift in Sources */,
+				C2B01D4E1F4161DD001EAE4D /* Colors.swift in Sources */,
 				5148CFAC1F3D0C61002F01F4 /* ListPresenter.swift in Sources */,
 				C2B01D361F3FA929001EAE4D /* SectionCell.swift in Sources */,
-				5148CF8F1F3D0BE3002F01F4 /* Formatter.swift in Sources */,
 				C2B01D441F40F851001EAE4D /* Pokemon.swift in Sources */,
 				5148CFC41F3D0E4B002F01F4 /* AppDelegate.swift in Sources */,
+				C2B01D551F4175A6001EAE4D /* StoreViewController.swift in Sources */,
 				C2B01D2D1F3D6841001EAE4D /* DetailRouter.swift in Sources */,
 				5148CFCE1F3D0FBB002F01F4 /* DetailViewProtocol.swift in Sources */,
 				5148CFB61F3D0C78002F01F4 /* CategoryProtocol.swift in Sources */,
@@ -618,17 +658,18 @@
 				5148CFE31F3D11DD002F01F4 /* RequestError.swift in Sources */,
 				C2B01D461F40F851001EAE4D /* PurchaseRealm.swift in Sources */,
 				5148CFDC1F3D1046002F01F4 /* TabBarRouter.swift in Sources */,
+				C2B01D501F4161F8001EAE4D /* Url.swift in Sources */,
 				C2B01D451F40F851001EAE4D /* Purchase.swift in Sources */,
 				C2B01D431F40F851001EAE4D /* Kind.swift in Sources */,
 				5148CFD01F3D0FC6002F01F4 /* DetailModel.swift in Sources */,
 				5148CFBE1F3D0C86002F01F4 /* ListTableViewController.swift in Sources */,
 				C2B01D341F3F9FD7001EAE4D /* JustRequestManager.swift in Sources */,
-				5148CF901F3D0BE3002F01F4 /* General.swift in Sources */,
 				5148CFC01F3D0C86002F01F4 /* PokemonCollectionViewCell.swift in Sources */,
 				5148CF911F3D0BE3002F01F4 /* Loader.swift in Sources */,
 				5148CFDA1F3D101D002F01F4 /* PurchaseCell.swift in Sources */,
 				5148CFAE1F3D0C61002F01F4 /* ListViewProtocol.swift in Sources */,
 				5148CF941F3D0BE3002F01F4 /* UIColorExtension.swift in Sources */,
+				C2B01D531F4171D0001EAE4D /* StoreRouter.swift in Sources */,
 				5148CFB51F3D0C78002F01F4 /* CategoryModel.swift in Sources */,
 				5148CF8E1F3D0BE3002F01F4 /* Do.swift in Sources */,
 				5148CFD41F3D0FD0002F01F4 /* DetailViewController.swift in Sources */,

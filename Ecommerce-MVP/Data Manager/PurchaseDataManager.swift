@@ -57,7 +57,7 @@ extension PurchaseDataManager {
         
         for purchase in purchases {
             
-            var parsedPurchase = Purchase(name: purchase.name, price: purchase.price, userName: purchase.userName, cardNumber: purchase.cardNumber, ccv: purchase.ccv, month: purchase.month, year: purchase.year, date: purchase.date)
+            var parsedPurchase = Purchase(name: purchase.name, price: purchase.price, userName: purchase.userName, cardNumber: purchase.cardNumber, date: purchase.date)
             
             if let data = purchase.image as Data? {
                 parsedPurchase.image = UIImage(data: data)

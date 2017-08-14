@@ -97,6 +97,7 @@ extension DetailViewController {
 extension DetailViewController {
     
     @IBAction func buyTapped(_ sender: UIButton) {
+        self.presenter?.buyItem()
     }
 }
 
@@ -115,5 +116,9 @@ extension DetailViewController: DetailViewProtocol {
         self.updateBackground(image: item.background)
         self.showTypes(images: item.types)
         self.showWeakness(images: item.weakness)
+    }
+    
+    func presentStoreView(viewController: UIViewController) {
+        self.present(viewController, animated: true, completion: nil)
     }
 }

@@ -15,7 +15,6 @@ class PurchaseRealm: Object {
     dynamic var price = ""
     dynamic var userName = ""
     dynamic var cardNumber = ""
-    dynamic var ccv = ""
     dynamic var month = ""
     dynamic var year = ""
     dynamic var date = ""

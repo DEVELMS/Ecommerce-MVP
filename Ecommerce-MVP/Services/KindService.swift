@@ -12,16 +12,8 @@ import SwiftyJSON
 
 final class KindService {
     
-    func parseKinds(json: JSON) -> [Kind] {
-        
-        var kinds = [Kind]()
-        
-        for (_, kind) in json {
-            
-            kinds.append(parse(kind: kind.stringValue))
-        }
-        
-        return kinds
+    func parseKinds(json: [JSON]) -> [Kind] {
+        return json.flatMap { parse(kind: $0.stringValue) }
     }
     
     private func parse(kind: String) -> Kind {

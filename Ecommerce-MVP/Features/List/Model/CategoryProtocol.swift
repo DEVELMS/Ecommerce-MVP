@@ -6,11 +6,9 @@
 //  Copyright © 2017 Lucas M Soares. All rights reserved.
 //
 
-import Foundation
-
 protocol CategoryProtocol {
     
     var name: String { get }
-    var price: NSNumber { get }
+    var price: String { get }
     var pokemons: [PokemonProtocol] { get }
 }

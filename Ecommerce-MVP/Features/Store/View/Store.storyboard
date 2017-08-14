@@ -1,7 +1,110 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Store View Controller-->
+        <scene sceneID="wcb-Ff-Mfb">
+            <objects>
+                <viewController storyboardIdentifier="StoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kad-Ze-PoV" customClass="StoreViewController" customModule="Ecommerce_MVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xyN-Bd-dcM"/>
+                        <viewControllerLayoutGuide type="bottom" id="i39-9w-8lW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q7g-7r-nZo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="store-background" translatesAutoresizingMaskIntoConstraints="NO" id="bKI-UN-H4A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-Nk-ugt">
+                                <rect key="frame" x="40" y="298" width="240" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDR-sR-4U7">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="87a-C1-bAZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Accept">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="acceptTapped:" destination="kad-Ze-PoV" eventType="touchUpInside" id="7QX-BP-5Od"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcK-s7-LUp">
+                                        <rect key="frame" x="90" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="smB-cw-nHY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Jump">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="jumpTapped:" destination="kad-Ze-PoV" eventType="touchUpInside" id="QTY-Ni-fyX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h24-pO-9T3">
+                                        <rect key="frame" x="160" y="0.0" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Tpm-hs-BTR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Decline">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="declineTapped:" destination="kad-Ze-PoV" eventType="touchUpInside" id="4Q2-mg-x2I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nurse_joy1" translatesAutoresizingMaskIntoConstraints="NO" id="VO5-wX-k5T">
+                                <rect key="frame" x="0.0" y="348" width="320" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="FqS-dv-sxw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i39-9w-8lW" firstAttribute="top" secondItem="bKI-UN-H4A" secondAttribute="bottom" id="3L9-yH-SCB"/>
+                            <constraint firstItem="VO5-wX-k5T" firstAttribute="leading" secondItem="q7g-7r-nZo" secondAttribute="leading" id="67y-4u-fso"/>
+                            <constraint firstAttribute="bottom" secondItem="VO5-wX-k5T" secondAttribute="bottom" id="Fsf-Op-KBL"/>
+                            <constraint firstItem="bKI-UN-H4A" firstAttribute="leading" secondItem="q7g-7r-nZo" secondAttribute="leading" id="NuG-U2-8aW"/>
+                            <constraint firstItem="0hm-Nk-ugt" firstAttribute="centerX" secondItem="VO5-wX-k5T" secondAttribute="centerX" id="Qe8-gY-sz4"/>
+                            <constraint firstItem="VO5-wX-k5T" firstAttribute="top" secondItem="0hm-Nk-ugt" secondAttribute="bottom" constant="20" id="U5G-66-KaT"/>
+                            <constraint firstAttribute="trailing" secondItem="bKI-UN-H4A" secondAttribute="trailing" id="UPj-Fa-hQd"/>
+                            <constraint firstAttribute="trailing" secondItem="VO5-wX-k5T" secondAttribute="trailing" id="hj3-qX-jaJ"/>
+                            <constraint firstItem="bKI-UN-H4A" firstAttribute="top" secondItem="q7g-7r-nZo" secondAttribute="top" id="w3c-4U-Asb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAccept" destination="uDR-sR-4U7" id="8Qx-aW-zdZ"/>
+                        <outlet property="btnDecline" destination="h24-pO-9T3" id="OXY-bh-GGz"/>
+                        <outlet property="btnJump" destination="bcK-s7-LUp" id="2r8-iP-omS"/>
+                        <outlet property="imgJoy" destination="VO5-wX-k5T" id="qg0-p3-vPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCe-bP-4H1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="-56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nurse_joy1" width="520" height="355"/>
+        <image name="store-background" width="625" height="500"/>
+    </resources>
 </document>

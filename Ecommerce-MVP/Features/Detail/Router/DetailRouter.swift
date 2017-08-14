@@ -8,16 +8,33 @@
 
 import UIKit
 
-final class DetailRouter: DetailRouterProtocol {
+final class DetailRouter {
     
+    fileprivate unowned var detailView: DetailViewProtocol
+    
+    init() {
+        self.detailView = DetailViewController()
+    }
+}
+
+// MARK: Routes
+
+extension DetailRouter: DetailRouterProtocol {
+
     func show(from: ListViewProtocol, with: Pokemon, price: String) {
         
         let detailController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: DetailViewController.identifier) as! DetailViewController
         
-        let detailPresenter = DetailPresenter(view: detailController, item: with, price: price)
-        
+        let detailPresenter = DetailPresenter(view: detailController, router: self, item: with, price: price)
         detailController.presenter = detailPresenter
+        detailView = detailController
         
         from.showDetailView(viewController: detailController)
+    }
+    
+    func presentStore(with pokemon: Pokemon) {
+        
+        let storeRouter = StoreRouter()
+        storeRouter.present(from: detailView, pokemon: pokemon)
     }
 }

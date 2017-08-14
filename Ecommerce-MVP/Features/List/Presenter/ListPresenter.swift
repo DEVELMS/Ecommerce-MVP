@@ -41,7 +41,7 @@ extension ListPresenter {
     func itemSelected(section: Int, row: Int) {
         
         let item = self.items[section].pokemons[row]
-        router.showDetail(with: item, price: Formatter.moneyFormat(value: self.items[section].price))
+        router.showDetail(with: item, price: self.items[section].price)
     }
 }
 
