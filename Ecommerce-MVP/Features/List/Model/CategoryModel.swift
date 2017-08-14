@@ -10,13 +10,11 @@ struct CategoryModel : CategoryProtocol {
     
     let name: String
     let price: String
-    var pokemons: [PokemonProtocol]
+    let pokemons: [PokemonProtocol]
     
     init(model: Category) {
         self.name = model.name
         self.price = model.price
-        self.pokemons = []
-        
         self.pokemons = model.pokemons.flatMap { PokemonModel(model: $0) }
     }
 }

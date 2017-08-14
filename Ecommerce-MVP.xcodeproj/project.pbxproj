@@ -47,8 +47,16 @@
 		5148CFF01F420963002F01F4 /* JoyAskingStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFEF1F420963002F01F4 /* JoyAskingStep2.swift */; };
 		5148CFF21F4209F5002F01F4 /* StoreViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFF11F4209F5002F01F4 /* StoreViewProtocol.swift */; };
 		5148CFF41F421656002F01F4 /* PurchaseStep.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFF31F421656002F01F4 /* PurchaseStep.xib */; };
-		5148CFF61F4216E3002F01F4 /* QuestionsStep.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFF51F4216E3002F01F4 /* QuestionsStep.xib */; };
+		5148CFF61F4216E3002F01F4 /* RegisterStep.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFF51F4216E3002F01F4 /* RegisterStep.xib */; };
 		5148CFF81F421D3F002F01F4 /* StoreRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFF71F421D3F002F01F4 /* StoreRouterProtocol.swift */; };
+		5148CFFA1F423948002F01F4 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFF91F423948002F01F4 /* UserDataManager.swift */; };
+		5148CFFC1F4239EE002F01F4 /* CreditCardStep.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFFB1F4239EE002F01F4 /* CreditCardStep.xib */; };
+		5148D0011F42404C002F01F4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148D0001F42404C002F01F4 /* CustomTextField.swift */; };
+		5148D0031F4246A1002F01F4 /* RegisterStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148D0021F4246A1002F01F4 /* RegisterStep.swift */; };
+		5148D0051F4247A8002F01F4 /* CreditCardStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148D0041F4247A8002F01F4 /* CreditCardStep.swift */; };
+		5148D0071F42482A002F01F4 /* PurchaseStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148D0061F42482A002F01F4 /* PurchaseStep.swift */; };
+		5148D00A1F424A3A002F01F4 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148D0091F424A3A002F01F4 /* RegisterModel.swift */; };
+		5148D00C1F424A5B002F01F4 /* RegisterModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148D00B1F424A5B002F01F4 /* RegisterModelProtocol.swift */; };
 		C248F85B1F2E7D9C004095CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C248F85A1F2E7D9C004095CA /* Assets.xcassets */; };
 		C2B01CDD1F395209001EAE4D /* Just.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CD91F395209001EAE4D /* Just.framework */; };
 		C2B01CDE1F395209001EAE4D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CDA1F395209001EAE4D /* Realm.framework */; };
@@ -118,8 +126,16 @@
 		5148CFEF1F420963002F01F4 /* JoyAskingStep2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyAskingStep2.swift; sourceTree = "<group>"; };
 		5148CFF11F4209F5002F01F4 /* StoreViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewProtocol.swift; sourceTree = "<group>"; };
 		5148CFF31F421656002F01F4 /* PurchaseStep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseStep.xib; sourceTree = "<group>"; };
-		5148CFF51F4216E3002F01F4 /* QuestionsStep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsStep.xib; sourceTree = "<group>"; };
+		5148CFF51F4216E3002F01F4 /* RegisterStep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterStep.xib; sourceTree = "<group>"; };
 		5148CFF71F421D3F002F01F4 /* StoreRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreRouterProtocol.swift; sourceTree = "<group>"; };
+		5148CFF91F423948002F01F4 /* UserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		5148CFFB1F4239EE002F01F4 /* CreditCardStep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardStep.xib; sourceTree = "<group>"; };
+		5148D0001F42404C002F01F4 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		5148D0021F4246A1002F01F4 /* RegisterStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStep.swift; sourceTree = "<group>"; };
+		5148D0041F4247A8002F01F4 /* CreditCardStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardStep.swift; sourceTree = "<group>"; };
+		5148D0061F42482A002F01F4 /* PurchaseStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseStep.swift; sourceTree = "<group>"; };
+		5148D0091F424A3A002F01F4 /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		5148D00B1F424A5B002F01F4 /* RegisterModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModelProtocol.swift; sourceTree = "<group>"; };
 		C248F8501F2E7D9C004095CA /* Ecommerce-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C248F85A1F2E7D9C004095CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2B01CD91F395209001EAE4D /* Just.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Just.framework; path = Carthage/Build/iOS/Just.framework; sourceTree = "<group>"; };
@@ -185,10 +201,23 @@
 				5148CFED1F420954002F01F4 /* JoyAskingStep1.swift */,
 				5148CFEA1F42079D002F01F4 /* JoyAskingStep2.xib */,
 				5148CFEF1F420963002F01F4 /* JoyAskingStep2.swift */,
+				5148CFF51F4216E3002F01F4 /* RegisterStep.xib */,
+				5148D0021F4246A1002F01F4 /* RegisterStep.swift */,
+				5148CFFB1F4239EE002F01F4 /* CreditCardStep.xib */,
+				5148D0041F4247A8002F01F4 /* CreditCardStep.swift */,
 				5148CFF31F421656002F01F4 /* PurchaseStep.xib */,
-				5148CFF51F4216E3002F01F4 /* QuestionsStep.xib */,
+				5148D0061F42482A002F01F4 /* PurchaseStep.swift */,
 			);
 			name = Steps;
+			sourceTree = "<group>";
+		};
+		5148D0081F424A04002F01F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5148D0091F424A3A002F01F4 /* RegisterModel.swift */,
+				5148D00B1F424A5B002F01F4 /* RegisterModelProtocol.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C248F8471F2E7D9C004095CA = {
@@ -320,6 +349,7 @@
 			children = (
 				C2B01D511F4171B6001EAE4D /* Router */,
 				C2B01D4A1F415FFC001EAE4D /* Presenter */,
+				5148D0081F424A04002F01F4 /* Model */,
 				C2B01D471F411BED001EAE4D /* View */,
 			);
 			name = Store;
@@ -409,6 +439,7 @@
 				C2B01D4F1F4161F8001EAE4D /* Url.swift */,
 				5148CF871F3D0BE3002F01F4 /* Do.swift */,
 				5148CF8A1F3D0BE3002F01F4 /* Loader.swift */,
+				5148D0001F42404C002F01F4 /* CustomTextField.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -534,6 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				C2B01D3B1F40F834001EAE4D /* PurchaseDataManager.swift */,
+				5148CFF91F423948002F01F4 /* UserDataManager.swift */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -627,10 +659,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5148CFCA1F3D0F77002F01F4 /* Info.plist in Resources */,
-				5148CFF61F4216E3002F01F4 /* QuestionsStep.xib in Resources */,
+				5148CFF61F4216E3002F01F4 /* RegisterStep.xib in Resources */,
 				5148CFD31F3D0FD0002F01F4 /* Detail.storyboard in Resources */,
 				C2B01D2B1F3D476E001EAE4D /* LaunchScreen.storyboard in Resources */,
 				5148CFBD1F3D0C86002F01F4 /* List.storyboard in Resources */,
+				5148CFFC1F4239EE002F01F4 /* CreditCardStep.xib in Resources */,
 				C2B01D491F411C02001EAE4D /* Store.storyboard in Resources */,
 				C2B01D371F3FB00D001EAE4D /* PokemonSolid-Normal.ttf in Resources */,
 				5148CFF41F421656002F01F4 /* PurchaseStep.xib in Resources */,
@@ -688,12 +721,15 @@
 				C2B01D3C1F40F834001EAE4D /* PurchaseDataManager.swift in Sources */,
 				C2B01D3A1F40F7BF001EAE4D /* RequestManager.swift in Sources */,
 				5148CFA31F3D0BFA002F01F4 /* KindService.swift in Sources */,
+				5148D00A1F424A3A002F01F4 /* RegisterModel.swift in Sources */,
 				5148CFF01F420963002F01F4 /* JoyAskingStep2.swift in Sources */,
 				5148CF921F3D0BE3002F01F4 /* NSObjectExtension.swift in Sources */,
 				5148CFB71F3D0C78002F01F4 /* PokemonModel.swift in Sources */,
 				5148CFE01F3D104C002F01F4 /* TabBar.swift in Sources */,
 				5148CFB01F3D0C6C002F01F4 /* ListRouter.swift in Sources */,
 				5148CFD81F3D1015002F01F4 /* ProfileTableViewController.swift in Sources */,
+				5148D0031F4246A1002F01F4 /* RegisterStep.swift in Sources */,
+				5148CFFA1F423948002F01F4 /* UserDataManager.swift in Sources */,
 				5148CFAD1F3D0C61002F01F4 /* ListRouterProtocol.swift in Sources */,
 				5148CFA51F3D0BFA002F01F4 /* PokemonService.swift in Sources */,
 				5148CFE31F3D11DD002F01F4 /* RequestError.swift in Sources */,
@@ -703,12 +739,15 @@
 				5148CFF81F421D3F002F01F4 /* StoreRouterProtocol.swift in Sources */,
 				C2B01D451F40F851001EAE4D /* Purchase.swift in Sources */,
 				C2B01D431F40F851001EAE4D /* Kind.swift in Sources */,
+				5148D00C1F424A5B002F01F4 /* RegisterModelProtocol.swift in Sources */,
 				5148CFF21F4209F5002F01F4 /* StoreViewProtocol.swift in Sources */,
 				5148CFEE1F420954002F01F4 /* JoyAskingStep1.swift in Sources */,
 				5148CFD01F3D0FC6002F01F4 /* DetailModel.swift in Sources */,
 				5148CFBE1F3D0C86002F01F4 /* ListTableViewController.swift in Sources */,
 				C2B01D341F3F9FD7001EAE4D /* JustRequestManager.swift in Sources */,
+				5148D0071F42482A002F01F4 /* PurchaseStep.swift in Sources */,
 				5148CFC01F3D0C86002F01F4 /* PokemonCollectionViewCell.swift in Sources */,
+				5148D0011F42404C002F01F4 /* CustomTextField.swift in Sources */,
 				5148CF911F3D0BE3002F01F4 /* Loader.swift in Sources */,
 				5148CFDA1F3D101D002F01F4 /* PurchaseCell.swift in Sources */,
 				5148CFAE1F3D0C61002F01F4 /* ListViewProtocol.swift in Sources */,
@@ -724,6 +763,7 @@
 				C2B01D421F40F851001EAE4D /* Category.swift in Sources */,
 				5148CFA11F3D0BF9002F01F4 /* CategoryService.swift in Sources */,
 				C2B01D321F3F9F5B001EAE4D /* RequestMethods.swift in Sources */,
+				5148D0051F4247A8002F01F4 /* CreditCardStep.swift in Sources */,
 				5148CFB81F3D0C78002F01F4 /* PokemonProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

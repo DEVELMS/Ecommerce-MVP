@@ -11,11 +11,14 @@ import UIKit
 final class StorePresenter {
 
     fileprivate unowned let view: StoreViewProtocol
-    fileprivate var nextStep = Steps.firstStep
+    fileprivate var nextStep = Steps.firstAskingStep
     
-    fileprivate enum Steps: Int {
-        case firstStep = 0
-        case lastStep = 1
+    fileprivate enum Steps {
+        case firstAskingStep
+        case secondAskingStep
+        case registerStep
+        case creditCardStep
+        case purchaseStep
     }
     
     init(view: StoreViewProtocol, router: StoreRouterProtocol, item: Pokemon) {
@@ -31,11 +34,26 @@ extension StorePresenter {
     func showNextStep() {
     
         switch nextStep {
-        case .firstStep:
+        case .firstAskingStep:
             view.showStep1()
-            nextStep = .lastStep
-        case .lastStep:
+            nextStep = .secondAskingStep
+            
+        case .secondAskingStep:
             view.showStep2()
+            nextStep = .registerStep
+            
+        case .registerStep:
+            view.showRegisterStep()
+            nextStep = .creditCardStep
+            break
+            
+        case .creditCardStep:
+            view.showCreditCardStep()
+            nextStep = .purchaseStep
+            break
+            
+        case .purchaseStep:
+            break
         }
     }
 }

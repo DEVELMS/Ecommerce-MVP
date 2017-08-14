@@ -12,7 +12,11 @@ protocol StoreViewProtocol : class {
 
     func showStep1()
     func showStep2()
+    func showRegisterStep()
+    func showCreditCardStep()
+    func showPurchaseStep()
     func jumpToNextStep()
     func givingInformationsAccepted()
-    func givingInformationsDeclined()
+    func declined()
+    func storageInfos(register: RegisterModelProtocol)
 }

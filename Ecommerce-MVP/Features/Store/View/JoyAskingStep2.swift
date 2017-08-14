@@ -17,6 +17,6 @@ class JoyAskingStep2: UIView {
     }
     
     @IBAction func givingInformationsDecline(_ sender: UIButton) {
-        storeView?.givingInformationsDeclined()
+        storeView?.declined()
     }
 }

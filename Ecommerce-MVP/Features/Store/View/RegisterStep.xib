@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="i3J-Fq-61G" customClass="RegisterStep" customModule="Ecommerce_MVP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User Mock" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="foG-po-UQN" customClass="CustomTextField">
+                    <rect key="frame" x="20" y="20" width="335" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="i3J-Fq-61G" id="Ytp-Wz-lHt"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234-4321-1234-5678" borderStyle="roundedRect" placeholder="Credit card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGk-99-PQ4" customClass="CustomTextField">
+                    <rect key="frame" x="20" y="70" width="335" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="i3J-Fq-61G" id="OJV-NL-EJQ"/>
+                    </connections>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xme-oY-i9F">
+                    <rect key="frame" x="20" y="120" width="335" height="30"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="09" borderStyle="roundedRect" placeholder="Card month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBp-55-PAJ" customClass="CustomTextField">
+                            <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="i3J-Fq-61G" id="EOB-fe-Huc"/>
+                            </connections>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8b-bw-V64">
+                            <rect key="frame" x="109" y="0.0" width="8" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2023" borderStyle="roundedRect" placeholder="Card year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lga-iQ-gsm" customClass="CustomTextField">
+                            <rect key="frame" x="137" y="0.0" width="89" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="i3J-Fq-61G" id="Bs2-ql-1fg"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="889" borderStyle="roundedRect" placeholder="CCVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDQ-2q-t85" customClass="CustomTextField">
+                            <rect key="frame" x="246" y="0.0" width="89" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="i3J-Fq-61G" id="08O-L2-dZY"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="iBp-55-PAJ" firstAttribute="width" secondItem="Lga-iQ-gsm" secondAttribute="width" id="CoY-4z-z6K"/>
+                        <constraint firstItem="Lga-iQ-gsm" firstAttribute="width" secondItem="cDQ-2q-t85" secondAttribute="width" id="T5S-zD-bAT"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EYd-Kg-oET">
+                    <rect key="frame" x="97.5" y="170" width="180" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtC-oh-cOU">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="BHG-Nc-DAh"/>
+                                <constraint firstAttribute="width" constant="80" id="DGF-QY-qJr"/>
+                            </constraints>
+                            <state key="normal" title="Decline">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="declineTapped:" destination="i3J-Fq-61G" eventType="touchUpInside" id="meA-9N-aQl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNR-p5-9GP">
+                            <rect key="frame" x="100" y="0.0" width="80" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Lyg-wF-oNS"/>
+                                <constraint firstAttribute="width" constant="80" id="nkI-7D-o0G"/>
+                            </constraints>
+                            <state key="normal" title="Confirm">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmTapped:" destination="i3J-Fq-61G" eventType="touchUpInside" id="xR2-sA-jna"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="D6t-aj-Aft"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eGk-99-PQ4" firstAttribute="leading" secondItem="foG-po-UQN" secondAttribute="leading" id="43s-wJ-nkY"/>
+                <constraint firstItem="Xme-oY-i9F" firstAttribute="trailing" secondItem="eGk-99-PQ4" secondAttribute="trailing" id="AdX-Un-0ZJ"/>
+                <constraint firstAttribute="trailing" secondItem="foG-po-UQN" secondAttribute="trailing" constant="20" id="BNn-xR-hL5"/>
+                <constraint firstItem="foG-po-UQN" firstAttribute="leading" secondItem="i3J-Fq-61G" secondAttribute="leading" constant="20" id="GZR-mm-nXJ"/>
+                <constraint firstItem="eGk-99-PQ4" firstAttribute="trailing" secondItem="foG-po-UQN" secondAttribute="trailing" id="MU1-cF-QaN"/>
+                <constraint firstItem="foG-po-UQN" firstAttribute="top" secondItem="i3J-Fq-61G" secondAttribute="top" constant="20" id="QLI-lx-dp6"/>
+                <constraint firstItem="EYd-Kg-oET" firstAttribute="top" secondItem="Xme-oY-i9F" secondAttribute="bottom" constant="20" id="Sms-M7-9ho"/>
+                <constraint firstItem="eGk-99-PQ4" firstAttribute="top" secondItem="foG-po-UQN" secondAttribute="bottom" constant="20" id="TB7-GH-erx"/>
+                <constraint firstAttribute="bottom" secondItem="EYd-Kg-oET" secondAttribute="bottom" constant="20" id="ihB-Fz-L04"/>
+                <constraint firstItem="Xme-oY-i9F" firstAttribute="leading" secondItem="eGk-99-PQ4" secondAttribute="leading" id="pnn-Q4-UyC"/>
+                <constraint firstItem="EYd-Kg-oET" firstAttribute="centerX" secondItem="i3J-Fq-61G" secondAttribute="centerX" id="rnf-dd-y65"/>
+                <constraint firstItem="Xme-oY-i9F" firstAttribute="top" secondItem="eGk-99-PQ4" secondAttribute="bottom" constant="20" id="uOn-Qt-FEP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cardMonth" destination="iBp-55-PAJ" id="xZi-xs-8I0"/>
+                <outlet property="cardNumber" destination="eGk-99-PQ4" id="AW2-zS-Mgc"/>
+                <outlet property="cardYear" destination="Lga-iQ-gsm" id="1PD-xy-uec"/>
+                <outlet property="ccvv" destination="cDQ-2q-t85" id="IsB-W6-rqG"/>
+                <outlet property="name" destination="foG-po-UQN" id="tSp-7v-Cao"/>
+            </connections>
+            <point key="canvasLocation" x="-102.5" y="43"/>
+        </view>
+    </objects>
+</document>
