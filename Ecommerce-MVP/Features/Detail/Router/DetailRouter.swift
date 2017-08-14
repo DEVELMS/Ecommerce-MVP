@@ -21,11 +21,11 @@ final class DetailRouter {
 
 extension DetailRouter: DetailRouterProtocol {
 
-    func show(from: ListViewProtocol, with: Pokemon, price: String) {
+    func show(from: ListViewProtocol, with pokemon: Pokemon, price: String) {
         
         let detailController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: DetailViewController.identifier) as! DetailViewController
         
-        let detailPresenter = DetailPresenter(view: detailController, router: self, item: with, price: price)
+        let detailPresenter = DetailPresenter(view: detailController, router: self, item: ModelDetailRouter(pokemon: pokemon, price: price))
         detailController.presenter = detailPresenter
         detailView = detailController
         
@@ -35,6 +35,6 @@ extension DetailRouter: DetailRouterProtocol {
     func presentStore(with pokemon: Pokemon) {
         
         let storeRouter = StoreRouter()
-        storeRouter.present(from: detailView, pokemon: pokemon)
+        storeRouter.present(at: detailView, with: pokemon)
     }
 }

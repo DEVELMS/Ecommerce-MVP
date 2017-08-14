@@ -9,47 +9,70 @@
 import UIKit
 
 class StoreViewController: UIViewController {
-
-    @IBOutlet weak var btnAccept: UIButton!
-    @IBOutlet weak var btnJump: UIButton!
-    @IBOutlet weak var btnDecline: UIButton!
-    @IBOutlet weak var imgJoy: UIImageView!
+    
+    var presenter: StorePresenter?
+    
+    fileprivate lazy var joyAsking1 = Bundle.main.loadNibNamed(JoyAskingStep1.identifier, owner: self, options: nil)?[0] as! JoyAskingStep1
+    fileprivate lazy var joyAsking2 = Bundle.main.loadNibNamed(JoyAskingStep2.identifier, owner: self, options: nil)?[0] as! JoyAskingStep2
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        UIView.transition(with: self.view,
-                          duration: 1,
-                          options: .showHideTransitionViews,
-                          animations: {
-                            self.btnAccept.isHidden = true
-                            self.btnDecline.isHidden = true },
-                          completion: nil)
+        self.presenter?.showNextStep()
     }
 }
 
-// MARK: Actions
+// MARK: Private methods
 
 extension StoreViewController {
 
-    @IBAction func acceptTapped(_ sender: UIButton) {
+    fileprivate func addSubviewWithBottomAnchor(with view: UIView) {
         
+        let margins = self.view.layoutMarginsGuide
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(view)
+        self.view.bringSubview(toFront: view)
+        
+        view.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: -16).isActive = true
+        view.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: 16).isActive = true
+        view.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: 8).isActive = true
     }
+}
+
+// MARK: Store view protocol
+
+extension StoreViewController: StoreViewProtocol {
     
-    @IBAction func jumpTapped(_ sender: UIButton) {
-        
-        UIView.transition(with: imgJoy,
+    func showStep1() {
+        joyAsking1.storeView = self
+        UIView.transition(with: self.view,
                           duration: 1,
-                          options: .showHideTransitionViews,
+                          options: .transitionFlipFromLeft,
                           animations: {
-                                self.imgJoy.image = #imageLiteral(resourceName: "nurse_joy2")
-                                self.btnJump.removeFromSuperview()
-                                self.btnAccept.isHidden = false
-                                self.btnDecline.isHidden = false },
+                            self.addSubviewWithBottomAnchor(with: self.joyAsking1) },
                           completion: nil)
     }
     
-    @IBAction func declineTapped(_ sender: UIButton) {
+    func showStep2() {
+        joyAsking2.storeView = self
+        UIView.transition(with: self.view,
+                          duration: 1,
+                          options: .transitionFlipFromLeft,
+                          animations: {
+                            self.addSubviewWithBottomAnchor(with: self.joyAsking2) },
+                          completion: nil)
+    }
+    
+    func jumpToNextStep() {
+        self.view.subviews.last?.removeFromSuperview()
+        self.presenter?.showNextStep()
+    }
+    
+    func givingInformationsAccepted() {
+        
+    }
+    
+    func givingInformationsDeclined() {
         self.dismiss(animated: true, completion: nil)
     }
 }

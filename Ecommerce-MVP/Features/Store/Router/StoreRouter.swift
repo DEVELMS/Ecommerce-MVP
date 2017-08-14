@@ -8,12 +8,15 @@
 
 import UIKit
 
-final class StoreRouter {
+final class StoreRouter: StoreRouterProtocol {
     
-    func present(from: DetailViewProtocol, pokemon with: Pokemon) {
+    func present(at: DetailViewProtocol, with pokemon: Pokemon) {
         
         let storeController = UIStoryboard(name: "Store", bundle: nil).instantiateViewController(withIdentifier: StoreViewController.identifier) as! StoreViewController
         
-        from.presentStoreView(viewController: storeController)
+        let storePresenter = StorePresenter(view: storeController, router: self, item: pokemon)
+        storeController.presenter = storePresenter
+        
+        at.presentStoreView(viewController: storeController)
     }
 }

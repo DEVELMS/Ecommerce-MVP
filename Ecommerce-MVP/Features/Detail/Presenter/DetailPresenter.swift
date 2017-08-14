@@ -18,11 +18,11 @@ final class DetailPresenter {
     let item: Pokemon
     let price: String
     
-    init(view: DetailViewProtocol, router: DetailRouterProtocol, item: Pokemon, price: String) {
+    init(view: DetailViewProtocol, router: DetailRouterProtocol, item: ModelDetailRouter) {
         self.router = router
         self.view = view
-        self.item = item
-        self.price = price
+        self.item = item.pokemon
+        self.price = item.price
         
         self.setStorageViewItem()
     }

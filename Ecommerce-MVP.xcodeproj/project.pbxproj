@@ -40,6 +40,15 @@
 		5148CFE01F3D104C002F01F4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFDE1F3D104C002F01F4 /* TabBar.swift */; };
 		5148CFE31F3D11DD002F01F4 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFE21F3D11DD002F01F4 /* RequestError.swift */; };
 		5148CFE51F3D17A5002F01F4 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFE41F3D17A5002F01F4 /* RequestProtocol.swift */; };
+		5148CFE71F41EDD2002F01F4 /* ModelDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFE61F41EDD2002F01F4 /* ModelDetailRouter.swift */; };
+		5148CFE91F4206F8002F01F4 /* JoyAskingStep1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFE81F4206F8002F01F4 /* JoyAskingStep1.xib */; };
+		5148CFEB1F42079D002F01F4 /* JoyAskingStep2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFEA1F42079D002F01F4 /* JoyAskingStep2.xib */; };
+		5148CFEE1F420954002F01F4 /* JoyAskingStep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFED1F420954002F01F4 /* JoyAskingStep1.swift */; };
+		5148CFF01F420963002F01F4 /* JoyAskingStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFEF1F420963002F01F4 /* JoyAskingStep2.swift */; };
+		5148CFF21F4209F5002F01F4 /* StoreViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFF11F4209F5002F01F4 /* StoreViewProtocol.swift */; };
+		5148CFF41F421656002F01F4 /* PurchaseStep.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFF31F421656002F01F4 /* PurchaseStep.xib */; };
+		5148CFF61F4216E3002F01F4 /* QuestionsStep.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5148CFF51F4216E3002F01F4 /* QuestionsStep.xib */; };
+		5148CFF81F421D3F002F01F4 /* StoreRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148CFF71F421D3F002F01F4 /* StoreRouterProtocol.swift */; };
 		C248F85B1F2E7D9C004095CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C248F85A1F2E7D9C004095CA /* Assets.xcassets */; };
 		C2B01CDD1F395209001EAE4D /* Just.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CD91F395209001EAE4D /* Just.framework */; };
 		C2B01CDE1F395209001EAE4D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B01CDA1F395209001EAE4D /* Realm.framework */; };
@@ -102,6 +111,15 @@
 		5148CFDE1F3D104C002F01F4 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		5148CFE21F3D11DD002F01F4 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		5148CFE41F3D17A5002F01F4 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		5148CFE61F41EDD2002F01F4 /* ModelDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelDetailRouter.swift; path = "Ecommerce-MVP/Features/Detail/Router/ModelDetailRouter.swift"; sourceTree = SOURCE_ROOT; };
+		5148CFE81F4206F8002F01F4 /* JoyAskingStep1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoyAskingStep1.xib; sourceTree = "<group>"; };
+		5148CFEA1F42079D002F01F4 /* JoyAskingStep2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoyAskingStep2.xib; sourceTree = "<group>"; };
+		5148CFED1F420954002F01F4 /* JoyAskingStep1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyAskingStep1.swift; sourceTree = "<group>"; };
+		5148CFEF1F420963002F01F4 /* JoyAskingStep2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyAskingStep2.swift; sourceTree = "<group>"; };
+		5148CFF11F4209F5002F01F4 /* StoreViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewProtocol.swift; sourceTree = "<group>"; };
+		5148CFF31F421656002F01F4 /* PurchaseStep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseStep.xib; sourceTree = "<group>"; };
+		5148CFF51F4216E3002F01F4 /* QuestionsStep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsStep.xib; sourceTree = "<group>"; };
+		5148CFF71F421D3F002F01F4 /* StoreRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreRouterProtocol.swift; sourceTree = "<group>"; };
 		C248F8501F2E7D9C004095CA /* Ecommerce-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C248F85A1F2E7D9C004095CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2B01CD91F395209001EAE4D /* Just.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Just.framework; path = Carthage/Build/iOS/Just.framework; sourceTree = "<group>"; };
@@ -158,6 +176,19 @@
 			);
 			name = Request;
 			path = Shared/Request;
+			sourceTree = "<group>";
+		};
+		5148CFEC1F420812002F01F4 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				5148CFE81F4206F8002F01F4 /* JoyAskingStep1.xib */,
+				5148CFED1F420954002F01F4 /* JoyAskingStep1.swift */,
+				5148CFEA1F42079D002F01F4 /* JoyAskingStep2.xib */,
+				5148CFEF1F420963002F01F4 /* JoyAskingStep2.swift */,
+				5148CFF31F421656002F01F4 /* PurchaseStep.xib */,
+				5148CFF51F4216E3002F01F4 /* QuestionsStep.xib */,
+			);
+			name = Steps;
 			sourceTree = "<group>";
 		};
 		C248F8471F2E7D9C004095CA = {
@@ -494,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				5148CFCF1F3D0FC6002F01F4 /* DetailModel.swift */,
+				5148CFE61F41EDD2002F01F4 /* ModelDetailRouter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -509,6 +541,7 @@
 		C2B01D471F411BED001EAE4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5148CFEC1F420812002F01F4 /* Steps */,
 				C2B01D481F411C02001EAE4D /* Store.storyboard */,
 				C2B01D541F4175A6001EAE4D /* StoreViewController.swift */,
 			);
@@ -519,6 +552,8 @@
 			isa = PBXGroup;
 			children = (
 				C2B01D4B1F416014001EAE4D /* StorePresenter.swift */,
+				5148CFF11F4209F5002F01F4 /* StoreViewProtocol.swift */,
+				5148CFF71F421D3F002F01F4 /* StoreRouterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -592,13 +627,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5148CFCA1F3D0F77002F01F4 /* Info.plist in Resources */,
+				5148CFF61F4216E3002F01F4 /* QuestionsStep.xib in Resources */,
 				5148CFD31F3D0FD0002F01F4 /* Detail.storyboard in Resources */,
 				C2B01D2B1F3D476E001EAE4D /* LaunchScreen.storyboard in Resources */,
 				5148CFBD1F3D0C86002F01F4 /* List.storyboard in Resources */,
 				C2B01D491F411C02001EAE4D /* Store.storyboard in Resources */,
 				C2B01D371F3FB00D001EAE4D /* PokemonSolid-Normal.ttf in Resources */,
+				5148CFF41F421656002F01F4 /* PurchaseStep.xib in Resources */,
 				5148CFD71F3D1015002F01F4 /* Profile.storyboard in Resources */,
 				C248F85B1F2E7D9C004095CA /* Assets.xcassets in Resources */,
+				5148CFEB1F42079D002F01F4 /* JoyAskingStep2.xib in Resources */,
+				5148CFE91F4206F8002F01F4 /* JoyAskingStep1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,9 +684,11 @@
 				C2B01D2D1F3D6841001EAE4D /* DetailRouter.swift in Sources */,
 				5148CFCE1F3D0FBB002F01F4 /* DetailViewProtocol.swift in Sources */,
 				5148CFB61F3D0C78002F01F4 /* CategoryProtocol.swift in Sources */,
+				5148CFE71F41EDD2002F01F4 /* ModelDetailRouter.swift in Sources */,
 				C2B01D3C1F40F834001EAE4D /* PurchaseDataManager.swift in Sources */,
 				C2B01D3A1F40F7BF001EAE4D /* RequestManager.swift in Sources */,
 				5148CFA31F3D0BFA002F01F4 /* KindService.swift in Sources */,
+				5148CFF01F420963002F01F4 /* JoyAskingStep2.swift in Sources */,
 				5148CF921F3D0BE3002F01F4 /* NSObjectExtension.swift in Sources */,
 				5148CFB71F3D0C78002F01F4 /* PokemonModel.swift in Sources */,
 				5148CFE01F3D104C002F01F4 /* TabBar.swift in Sources */,
@@ -659,8 +700,11 @@
 				C2B01D461F40F851001EAE4D /* PurchaseRealm.swift in Sources */,
 				5148CFDC1F3D1046002F01F4 /* TabBarRouter.swift in Sources */,
 				C2B01D501F4161F8001EAE4D /* Url.swift in Sources */,
+				5148CFF81F421D3F002F01F4 /* StoreRouterProtocol.swift in Sources */,
 				C2B01D451F40F851001EAE4D /* Purchase.swift in Sources */,
 				C2B01D431F40F851001EAE4D /* Kind.swift in Sources */,
+				5148CFF21F4209F5002F01F4 /* StoreViewProtocol.swift in Sources */,
+				5148CFEE1F420954002F01F4 /* JoyAskingStep1.swift in Sources */,
 				5148CFD01F3D0FC6002F01F4 /* DetailModel.swift in Sources */,
 				5148CFBE1F3D0C86002F01F4 /* ListTableViewController.swift in Sources */,
 				C2B01D341F3F9FD7001EAE4D /* JustRequestManager.swift in Sources */,
