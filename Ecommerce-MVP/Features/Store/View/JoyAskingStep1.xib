@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,13 +15,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nurse_joy1" translatesAutoresizingMaskIntoConstraints="NO" id="Fpn-9a-mv5">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="Csd-0I-xfb"/>
+                    </constraints>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxU-hC-QdK">
-                    <rect key="frame" x="157" y="0.0" width="60" height="30"/>
+                    <rect key="frame" x="0.0" y="220" width="375" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="cbH-6k-eKf"/>
+                        <constraint firstAttribute="height" constant="50" id="aPz-SH-8EH"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <state key="normal" title="OK">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -29,21 +35,16 @@
                         <action selector="jumpToNextStep:" destination="iN0-l3-epB" eventType="touchUpInside" id="TW4-SS-s1f"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nurse_joy1" translatesAutoresizingMaskIntoConstraints="NO" id="Fpn-9a-mv5">
-                    <rect key="frame" x="0.0" y="50" width="375" height="220"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="220" id="Csd-0I-xfb"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="UxU-hC-QdK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3fY-8N-v30"/>
-                <constraint firstAttribute="bottom" secondItem="Fpn-9a-mv5" secondAttribute="bottom" id="FrX-CN-yc3"/>
+                <constraint firstAttribute="bottom" secondItem="UxU-hC-QdK" secondAttribute="bottom" id="EcI-Za-DJ9"/>
                 <constraint firstAttribute="trailing" secondItem="Fpn-9a-mv5" secondAttribute="trailing" id="IGT-jK-Cu8"/>
-                <constraint firstItem="Fpn-9a-mv5" firstAttribute="top" secondItem="UxU-hC-QdK" secondAttribute="bottom" constant="20" id="aUk-lX-Kv7"/>
+                <constraint firstItem="Fpn-9a-mv5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PN0-pz-Rdy"/>
+                <constraint firstItem="UxU-hC-QdK" firstAttribute="top" secondItem="Fpn-9a-mv5" secondAttribute="bottom" id="SnZ-VG-k0L"/>
+                <constraint firstAttribute="trailing" secondItem="UxU-hC-QdK" secondAttribute="trailing" id="adX-rM-jHC"/>
+                <constraint firstItem="UxU-hC-QdK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="d4M-9W-GoQ"/>
                 <constraint firstItem="Fpn-9a-mv5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rev-zH-tjt"/>
-                <constraint firstItem="UxU-hC-QdK" firstAttribute="centerX" secondItem="Fpn-9a-mv5" secondAttribute="centerX" id="viD-Ld-F9y"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

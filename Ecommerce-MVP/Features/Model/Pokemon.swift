@@ -8,12 +8,12 @@
 
 struct Pokemon {
     
-    var id = Int()
-    var name = String()
-    var types = [Kind]()
-    var weakness = [Kind]()
-    var description = String()
-    var image = String()
+    let id: Int
+    let name: String
+    let types: [Kind]
+    let weakness: [Kind]
+    let description: String
+    let image: String
     
     init(id: Int, name: String, types: [Kind], weakness: [Kind], description: String, image: String) {
         

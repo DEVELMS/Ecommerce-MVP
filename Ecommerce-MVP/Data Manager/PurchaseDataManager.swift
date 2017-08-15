@@ -12,7 +12,6 @@ import UIKit
 final class PurchaseDataManager {
     
     fileprivate var dataBase: Realm?
-    fileprivate var purchases: RealmSwift.Results<PurchaseRealm>?
     
     init() { dataBase = try! Realm() }
 }
@@ -21,29 +20,42 @@ final class PurchaseDataManager {
 
 extension PurchaseDataManager {
     
-    func getPurchases() -> [Purchase] {
+    func getPurchases() -> [PurchaseProfileModel] {
         
-        guard let dataBase = self.dataBase else { return [Purchase]() }
+        guard let dataBase = self.dataBase else { return [PurchaseProfileModel]() }
         
-        purchases = dataBase.objects(PurchaseRealm.self).sorted(byKeyPath: "date", ascending: false)
+        let purchases = dataBase.objects(PurchaseRealm.self).sorted(byKeyPath: "date", ascending: false)
         
-        guard let purchases = self.purchases else { return [Purchase]() }
-        
-        return parsePurchases(purchases: purchases)
+        return parse(with: purchases)
     }
     
-    func remove(purchase: Purchase) {
-        
-        guard let dataBase = self.dataBase, let purchaseToDelete = dataBase.objects(PurchaseRealm.self).filter("date = '\(purchase.date)' AND name = '\(purchase.name)'").first else { return }
-        
-        try! dataBase.write { dataBase.delete(purchaseToDelete) }
-    }
-    
-    func removeAll() {
+    func savePurchase(with purchase: Purchase) {
         
         guard let dataBase = self.dataBase else { return }
         
-        try! dataBase.write { dataBase.deleteAll() }
+        try! dataBase.write {
+            dataBase.add(parse(with: purchase))
+        }
+    }
+}
+
+// MARK: - Private methods
+
+extension PurchaseDataManager {
+    
+    fileprivate func currentDate() -> String {
+        
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let seconds = calendar.component(.second, from: date)
+        
+        return "\(day)/\(month)/\(year) - \(hour):\(minutes):\(seconds)"
     }
 }
 
@@ -51,21 +63,20 @@ extension PurchaseDataManager {
 
 extension PurchaseDataManager {
     
-    fileprivate func parsePurchases(purchases: RealmSwift.Results<PurchaseRealm>) -> [Purchase] {
+    fileprivate func parse(with purchases: RealmSwift.Results<PurchaseRealm>) -> [PurchaseProfileModel] {
         
-        var parsedPurchases = [Purchase]()
+        return purchases.flatMap { PurchaseProfileModel(name: $0.name, price: $0.price, cardNumber: $0.cardNumber, image: $0.image, date: $0.date) }
+    }
+    
+    fileprivate func parse(with purchase: Purchase) -> PurchaseRealm {
         
-        for purchase in purchases {
-            
-            var parsedPurchase = Purchase(name: purchase.name, price: purchase.price, userName: purchase.userName, cardNumber: purchase.cardNumber, date: purchase.date)
-            
-            if let data = purchase.image as Data? {
-                parsedPurchase.image = UIImage(data: data)
-            }
-            
-            parsedPurchases.append(parsedPurchase)
-        }
+        let purchaseRealm = PurchaseRealm()
+        purchaseRealm.name = purchase.name
+        purchaseRealm.price = purchase.price
+        purchaseRealm.cardNumber = purchase.cardNumber
+        purchaseRealm.date = self.currentDate()
+        purchaseRealm.image = purchase.image
         
-        return parsedPurchases
+        return purchaseRealm
     }
 }

@@ -13,7 +13,7 @@ class JoyAskingStep2: UIView {
     var storeView: StoreViewProtocol?
     
     @IBAction func givingInformationsAccepted(_ sender: UIButton) {
-        storeView?.givingInformationsAccepted()
+        storeView?.jumpToNextStep()
     }
     
     @IBAction func givingInformationsDecline(_ sender: UIButton) {

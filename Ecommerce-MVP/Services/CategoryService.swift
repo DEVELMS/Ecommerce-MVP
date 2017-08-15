@@ -20,7 +20,8 @@ final class CategoryService {
             }, failure: { failure in
             
                 fail(failure.description)
-            })
+            }
+        )
     }
 }
 

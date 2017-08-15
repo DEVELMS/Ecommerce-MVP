@@ -9,5 +9,5 @@
 protocol DetailRouterProtocol: class {
     
     func show(from: ListViewProtocol, with: Pokemon, price: String)
-    func presentStore(with pokemon: Pokemon)
+    func presentStore(with item: DetailedPokemon)
 }

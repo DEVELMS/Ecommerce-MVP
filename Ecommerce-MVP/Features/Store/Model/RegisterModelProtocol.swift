@@ -11,5 +11,5 @@ protocol RegisterModelProtocol {
     var cardNumber: String { get }
     var cardMonth: String { get }
     var cardYear: String { get }
-    var cardCCVV: String { get }
+    var cardCvv: String { get }
 }

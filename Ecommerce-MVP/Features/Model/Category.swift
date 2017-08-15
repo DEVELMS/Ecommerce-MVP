@@ -10,10 +10,10 @@ import Foundation
 
 struct Category {
     
-    var id: Int
-    var price: String
-    var name: String
-    var pokemons: [Pokemon]
+    let id: Int
+    let price: String
+    let name: String
+    let pokemons: [Pokemon]
     
     init(id: Int, price: NSNumber, name: String, pokemons: [Pokemon]) {
         

@@ -6,25 +6,18 @@
 //  Copyright © 2016 DEVELMS. All rights reserved.
 //
 
-import UIKit
-
 struct Purchase {
     
-    var name: String
-    var price: String
-    var userName: String
-    var cardNumber: String
-    var date: String
-    var image: UIImage?
+    let name: String
+    let price: String
+    let cardNumber: String
+    let image: String
     
-    init(name: String, price: String, userName: String, cardNumber: String, date: String, image: UIImage? = nil) {
+    init(name: String, price: String, cardNumber: String, image: String) {
         
         self.name = name
         self.price = price
-        self.userName = userName
         self.cardNumber = cardNumber
-        self.date = date
-        
-        if let image = image { self.image = image }
+        self.image = image
     }
 }

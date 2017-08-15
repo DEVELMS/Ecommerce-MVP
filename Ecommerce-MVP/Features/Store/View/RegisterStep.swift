@@ -10,11 +10,11 @@ import UIKit
 
 class RegisterStep: UIView {
     
-    @IBOutlet fileprivate weak var name: CustomTextField!
-    @IBOutlet weak var cardNumber: CustomTextField!
-    @IBOutlet weak var cardMonth: CustomTextField!
-    @IBOutlet weak var cardYear: CustomTextField!
-    @IBOutlet weak var ccvv: CustomTextField!
+    @IBOutlet fileprivate weak var name: UITextField!
+    @IBOutlet fileprivate weak var cardNumber: UITextField!
+    @IBOutlet fileprivate weak var cardMonth: UITextField!
+    @IBOutlet fileprivate weak var cardYear: UITextField!
+    @IBOutlet fileprivate weak var cvv: UITextField!
     
     var storeView: StoreViewProtocol?
 }
@@ -28,6 +28,6 @@ extension RegisterStep {
     }
     
     @IBAction func confirmTapped(_ sender: UIButton) {
-        storeView?.storageInfos(register: RegisterModel(userName: name.text, cardNumber: cardNumber.text, cardMonth: cardNumber.text, cardYear: cardYear.text, cardCCVV: ccvv.text))
+        storeView?.storageInfos(register: RegisterModel(userName: name.text ?? "", cardNumber: cardNumber.text ?? "", cardMonth: cardMonth.text ?? "", cardYear: cardYear.text ?? "", cardCvv: cvv.text ?? ""))
     }
 }

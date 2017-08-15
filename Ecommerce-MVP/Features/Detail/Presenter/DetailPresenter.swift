@@ -18,7 +18,7 @@ final class DetailPresenter {
     let item: Pokemon
     let price: String
     
-    init(view: DetailViewProtocol, router: DetailRouterProtocol, item: ModelDetailRouter) {
+    init(view: DetailViewProtocol, router: DetailRouterProtocol, item: DetailedPokemon) {
         self.router = router
         self.view = view
         self.item = item.pokemon
@@ -42,7 +42,7 @@ extension DetailPresenter {
     }
     
     func buyItem() {
-        router.presentStore(with: item)
+        router.presentStore(with: DetailedPokemon(pokemon: item, price: price))
     }
 }
 
@@ -59,13 +59,13 @@ extension DetailPresenter {
         
         var background = UIImage()
         
-        if from.types.contains(where: { $0.option == Kind.Option.fire }) {
+        if from.types.contains(where: { $0 == .fire }) {
             background = #imageLiteral(resourceName: "fire-background")
         }
-        else if from.types.contains(where: { $0.option == Kind.Option.flying }) {
+        else if from.types.contains(where: { $0 == .flying }) {
             background = #imageLiteral(resourceName: "sky-background")
         }
-        else if from.types.contains(where: { $0.option == Kind.Option.water }) {
+        else if from.types.contains(where: { $0 == .water }) {
             background = #imageLiteral(resourceName: "water-background")
         }
         else { background = #imageLiteral(resourceName: "default-background") }
@@ -78,7 +78,7 @@ extension DetailPresenter {
         var types = [UIImage]()
         
         for type in from.types {
-            types.append(type.option.image)
+            types.append(type.image)
         }
         
         return types
@@ -89,7 +89,7 @@ extension DetailPresenter {
         var weakness = [UIImage]()
         
         for weak in from.weakness {
-            weakness.append(weak.option.image)
+            weakness.append(weak.image)
         }
         
         return weakness

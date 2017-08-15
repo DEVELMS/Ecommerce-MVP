@@ -25,16 +25,16 @@ extension DetailRouter: DetailRouterProtocol {
         
         let detailController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: DetailViewController.identifier) as! DetailViewController
         
-        let detailPresenter = DetailPresenter(view: detailController, router: self, item: ModelDetailRouter(pokemon: pokemon, price: price))
+        let detailPresenter = DetailPresenter(view: detailController, router: self, item: DetailedPokemon(pokemon: pokemon, price: price))
         detailController.presenter = detailPresenter
         detailView = detailController
         
         from.showDetailView(viewController: detailController)
     }
     
-    func presentStore(with pokemon: Pokemon) {
+    func presentStore(with item: DetailedPokemon) {
         
         let storeRouter = StoreRouter()
-        storeRouter.present(at: detailView, with: pokemon)
+        storeRouter.present(at: detailView, with: item)
     }
 }

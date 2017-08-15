@@ -43,6 +43,9 @@ extension TabBarRouter {
         
         let profileController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: ProfileTableViewController.identifier) as! ProfileTableViewController
         
+        let profilePresenter = ProfilePresenter(view: profileController)
+        profileController.presenter = profilePresenter
+        
         profileController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "profile-icon"), selectedImage: #imageLiteral(resourceName: "profile-icon"))
         
         return profileController

@@ -12,13 +12,13 @@ struct RegisterModel: RegisterModelProtocol {
     let cardNumber: String
     let cardMonth: String
     let cardYear: String
-    let cardCCVV: String
+    let cardCvv: String
     
-    init(userName: String, cardNumber: String, cardMonth: String, cardYear: String, cardCCVV: String) {
+    init(userName: String, cardNumber: String, cardMonth: String, cardYear: String, cardCvv: String) {
         self.userName = userName
         self.cardNumber = cardNumber
         self.cardMonth = cardMonth
         self.cardYear = cardYear
-        self.cardCCVV = cardCCVV
+        self.cardCvv = cardCvv
     }
 }

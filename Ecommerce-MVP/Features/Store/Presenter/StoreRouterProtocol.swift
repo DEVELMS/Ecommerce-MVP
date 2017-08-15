@@ -7,5 +7,5 @@
 //
 
 protocol StoreRouterProtocol: class {
-    func present(at: DetailViewProtocol, with: Pokemon)
+    func present(at: DetailViewProtocol, with: DetailedPokemon)
 }
