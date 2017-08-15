@@ -25,7 +25,7 @@ class StoreViewController: UIViewController {
     }
 }
 
-// MARK: Private methods
+// MARK: - Private methods
 
 extension StoreViewController {
 
@@ -68,7 +68,7 @@ extension StoreViewController {
     }
 }
 
-// MARK: Store view protocol
+// MARK: - Store view protocol
 
 extension StoreViewController: StoreViewProtocol {
     

@@ -35,7 +35,7 @@ final class StorePresenter {
     }
 }
 
-// MARK: Public Methods
+// MARK: - Public Methods
 
 extension StorePresenter {
 
@@ -119,7 +119,7 @@ extension StorePresenter {
     }
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 extension StorePresenter {
     

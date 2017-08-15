@@ -23,7 +23,7 @@ class PurchaseStep: UIView {
     }
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 extension PurchaseStep {
     
@@ -42,7 +42,7 @@ extension PurchaseStep {
     }
 }
 
-// MARK: Actions
+// MARK: - Actions
 
 extension PurchaseStep {
 

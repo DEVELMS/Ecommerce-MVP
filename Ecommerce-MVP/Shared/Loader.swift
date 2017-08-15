@@ -30,7 +30,7 @@ final class Loader {
 
 extension Loader {
 
-    // MARK: Public methods
+    // MARK: - Public methods
     
     func start(on: UIView) {
         
@@ -44,7 +44,7 @@ extension Loader {
         imageView.removeFromSuperview()
     }
     
-    // MARK: Private methods
+    // MARK: - Private methods
     
     private func getLoading(to: UIView) {
         

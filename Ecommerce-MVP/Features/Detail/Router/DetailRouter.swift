@@ -17,7 +17,7 @@ final class DetailRouter {
     }
 }
 
-// MARK: Routes
+// MARK: - Routes
 
 extension DetailRouter: DetailRouterProtocol {
 

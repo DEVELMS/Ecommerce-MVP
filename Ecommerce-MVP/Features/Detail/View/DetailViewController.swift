@@ -32,7 +32,7 @@ class DetailViewController: UIViewController {
     }
 }
 
-// MARK: Private methods
+// MARK: - Private methods
 
 extension DetailViewController {
     
@@ -92,7 +92,7 @@ extension DetailViewController {
     }
 }
 
-// MARK: Actions
+// MARK: - Actions
 
 extension DetailViewController {
     

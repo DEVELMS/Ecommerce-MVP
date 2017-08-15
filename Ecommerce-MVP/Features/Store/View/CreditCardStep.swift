@@ -25,7 +25,7 @@ class CreditCardStep: UIView {
     }
 }
 
-// MARK: Private methods
+// MARK: - Private methods
 
 extension CreditCardStep {
 
@@ -43,7 +43,7 @@ extension CreditCardStep {
     }
 }
 
-// MARK: Actions
+// MARK: - Actions
 
 extension CreditCardStep {
     

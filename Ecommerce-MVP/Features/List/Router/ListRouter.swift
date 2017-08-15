@@ -17,7 +17,7 @@ final class ListRouter {
     }
 }
 
-// MARK: Routes
+// MARK: - Routes
 
 extension ListRouter: ListRouterProtocol {
 
